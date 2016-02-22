@@ -1,0 +1,11 @@
+INPUT PEMBELIAN - PARENT
+DETAIL BARANG INPUT PEMBELIAN - CHILD 1 (LEFT)
+DETAIL PEMBELIAN - CHILD 2 (RIGTH)
+
+Input Pembelian 
+1. Bisa Refresh Data Pemebelian di REFRESHLISTBELI()
+   Setiap list dikasi index masing-masing
+   jadi bisa di delete sesuai indexnya, di refresh setiap refresh UI
+   
+2. Dari DetailBarangInputPembelian -> DetailPembelian
+   Setiap data yang di kirim ke detail pembelian, di hitung harga totalnya

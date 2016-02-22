@@ -1,0 +1,1205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F8DF28-8607-4262-AF16-0CAAD8066693}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rahayu_Program</RootNamespace>
+    <AssemblyName>New Rahayu Program</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.PointOfService, Version=1.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Point Of Service\SDK\Microsoft.PointOfService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="OnBarcode.Barcode.WinForms, Version=6.0.0.41022, Culture=neutral, PublicKeyToken=4da8d7f865f70e30, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OnBarcode.Barcode.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\Conn.cs" />
+    <Compile Include="DialogBox\StationeryCashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\StationeryCashierForm.Designer.cs">
+      <DependentUpon>StationeryCashierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\PrintCustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\PrintCustomerDetail.Designer.cs">
+      <DependentUpon>PrintCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Employee\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Employee\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PVC\AddNewPVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\PVC\AddNewPVC.Designer.cs">
+      <DependentUpon>AddNewPVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PVC\UpdatePricePVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\PVC\UpdatePricePVC.Designer.cs">
+      <DependentUpon>UpdatePricePVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PVC\UpdateStockPVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\PVC\UpdateStockPVC.Designer.cs">
+      <DependentUpon>UpdateStockPVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintingDataSet.cs">
+      <DependentUpon>PrintingDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Report\ClosingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Report\ClosingReport.Designer.cs">
+      <DependentUpon>ClosingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Report\HutangPerCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Report\HutangPerCustomer.Designer.cs">
+      <DependentUpon>HutangPerCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\CreateSalesPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\CreateSalesPayment.Designer.cs">
+      <DependentUpon>CreateSalesPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\CreateSalesPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\CreateSalesPrinting.Designer.cs">
+      <DependentUpon>CreateSalesPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\FilterShowSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\FilterShowSales.Designer.cs">
+      <DependentUpon>FilterShowSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\PurchaseOrder\OpenPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\PurchaseOrder\OpenPDF.Designer.cs">
+      <DependentUpon>OpenPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\PurchaseOrder\UploadPO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\PurchaseOrder\UploadPO.Designer.cs">
+      <DependentUpon>UploadPO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingManualEditSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingManualEditSales.Designer.cs">
+      <DependentUpon>PrintingManualEditSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingManualSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingManualSales.Designer.cs">
+      <DependentUpon>PrintingManualSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingSalesCloneEditDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingSalesCloneEditDetail.Designer.cs">
+      <DependentUpon>PrintingSalesCloneEditDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingSalesCloneEditHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SalesClone\PrintingSalesCloneEditHeader.Designer.cs">
+      <DependentUpon>PrintingSalesCloneEditHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\ShowCustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\ShowCustomerDetail.Designer.cs">
+      <DependentUpon>ShowCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\ShowSalesPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\ShowSalesPrinting.Designer.cs">
+      <DependentUpon>ShowSalesPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\ChangePaymentSalesPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\ChangePaymentSalesPrinting.Designer.cs">
+      <DependentUpon>ChangePaymentSalesPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\PrintingCreateSalesList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\PrintingCreateSalesList.Designer.cs">
+      <DependentUpon>PrintingCreateSalesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesFinishing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesFinishing.Designer.cs">
+      <DependentUpon>SubSalesFinishing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesFinishingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesFinishingDetail.Designer.cs">
+      <DependentUpon>SubSalesFinishingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesOffset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesOffset.Designer.cs">
+      <DependentUpon>SubSalesOffset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSales\SubSalesSetting.Designer.cs">
+      <DependentUpon>SubSalesSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSuratJalan\CreateSuratJalanList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSuratJalan\CreateSuratJalanList.Designer.cs">
+      <DependentUpon>CreateSuratJalanList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSuratJalan\CreateSuratJalanManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSuratJalan\CreateSuratJalanManual.Designer.cs">
+      <DependentUpon>CreateSuratJalanManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSuratJalan\EditSuratJalanList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\SubSuratJalan\EditSuratJalanList.Designer.cs">
+      <DependentUpon>EditSuratJalanList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\Sales\TukerFaktur\CreateTandaTerima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing\Sales\TukerFaktur\CreateTandaTerima.Designer.cs">
+      <DependentUpon>CreateTandaTerima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVCDS.cs">
+      <DependentUpon>PVCDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PVCDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PVCDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\AddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\AddCompany.Designer.cs">
+      <DependentUpon>AddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\AddParentCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\AddParentCompany.Designer.cs">
+      <DependentUpon>AddParentCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\SearchCustomerPVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\SearchCustomerPVC.Designer.cs">
+      <DependentUpon>SearchCustomerPVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PVC\SearchPVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\PVC\SearchPVC.Designer.cs">
+      <DependentUpon>SearchPVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\CreateSalesPVC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\CreateSalesPVC.Designer.cs">
+      <DependentUpon>CreateSalesPVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCSalesPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCSalesPayment.Designer.cs">
+      <DependentUpon>PVCSalesPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCSalesUpdateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCSalesUpdateDetail.Designer.cs">
+      <DependentUpon>PVCSalesUpdateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCSalesUpdateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCSalesUpdateList.Designer.cs">
+      <DependentUpon>PVCSalesUpdateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\SalesPaymentPerCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\SalesPaymentPerCustomer.Designer.cs">
+      <DependentUpon>SalesPaymentPerCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\SalesPVCList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\SalesPVCList.Designer.cs">
+      <DependentUpon>SalesPVCList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\ViewAllSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\ViewAllSales.Designer.cs">
+      <DependentUpon>ViewAllSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\ViewSalesPVCCreatePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\ViewSalesPVCCreatePayment.Designer.cs">
+      <DependentUpon>ViewSalesPVCCreatePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\ViewSalesPVCList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\ViewSalesPVCList.Designer.cs">
+      <DependentUpon>ViewSalesPVCList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Transfer\PVCNewTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Transfer\PVCNewTransfer.Designer.cs">
+      <DependentUpon>PVCNewTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Transfer\TransferPVCList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PVC\Transfer\TransferPVCList.Designer.cs">
+      <DependentUpon>TransferPVCList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PrintingSales\NotaManualSales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotaManualSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingOfferingLetter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingOfferingLetter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesAllDebt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesAllDebt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesDebtPerCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesDebtPerCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesDetailPayment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesDetailPayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesInvoiceKecil.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesInvoiceKecil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesPayment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesPayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesSubReportFinishing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesSubReportFinishing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesSubReportPayment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesSubReportPayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesSuratJalan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesSuratJalan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesTandaTerima.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesTandaTerima.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintingSales\PrintingSalesWorkOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintingSalesWorkOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanHutangKeseluruhan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanHutangKeseluruhan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanPenjualanHarian.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPenjualanHarian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanPenjualanHarianGroup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPenjualanHarianGroup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanPenjualanHarianIncome.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPenjualanHarianIncome.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanStockManual.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanStockManual.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanTransferStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanTransferStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Search\SearchBarangStationery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\SearchBarangStationery.Designer.cs">
+      <DependentUpon>SearchBarangStationery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SearchEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\SearchEmployee.Designer.cs">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StationeryDS.cs">
+      <DependentUpon>StationeryDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StationeryDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StationeryDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\LoginBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\LoginBox.Designer.cs">
+      <DependentUpon>LoginBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\SupervisorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\SupervisorForm.Designer.cs">
+      <DependentUpon>SupervisorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\AnsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AnsBox.Designer.cs">
+      <DependentUpon>AnsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\MsgBox.Designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Form\QtyBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Form\QtyBox.Designer.cs">
+      <DependentUpon>QtyBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Parser.cs" />
+    <Compile Include="Other\Validasi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PVC\Report\ClosingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Report\ClosingReport.Designer.cs">
+      <DependentUpon>ClosingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanBedaStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanBedaStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanHabisStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanHabisStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanHarian.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanHarian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanHarianGroup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanHarianGroup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanMsBarang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanMsBarang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanPembelianHarian.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPembelianHarian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanPermintaanPerubahanHarga.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPermintaanPerubahanHarga.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanRekapAkhir.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanRekapAkhir.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Stationery\LaporanRekapAwal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanRekapAwal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stationery\GodHands\StationeryGodHands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\GodHands\StationeryGodHands.Designer.cs">
+      <DependentUpon>StationeryGodHands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\DetailBukaPackList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\DetailBukaPackList.Designer.cs">
+      <DependentUpon>DetailBukaPackList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\StationeryBukaPack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\StationeryBukaPack.Designer.cs">
+      <DependentUpon>StationeryBukaPack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsSupplier\AddNewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsSupplier\AddNewSupplier.Designer.cs">
+      <DependentUpon>AddNewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsSupplier\ListSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsSupplier\ListSupplier.Designer.cs">
+      <DependentUpon>ListSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsSupplier\ViewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsSupplier\ViewSupplier.Designer.cs">
+      <DependentUpon>ViewSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Purchase\DetailPembelian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\Purchase\DetailPembelian.Designer.cs">
+      <DependentUpon>DetailPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Purchase\InputPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Purchase\InputPembelian.Designer.cs">
+      <DependentUpon>InputPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Purchase\DetailBarangInputPembelian.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\Purchase\DetailBarangInputPembelian.Designer.cs">
+      <DependentUpon>DetailBarangInputPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\DetailBarangInputStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\DetailBarangInputStock.Designer.cs">
+      <DependentUpon>DetailBarangInputStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\InputStockByBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\InputStockByBarang.Designer.cs">
+      <DependentUpon>InputStockByBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\LihatSemuaDaftarBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\LihatSemuaDaftarBarang.Designer.cs">
+      <DependentUpon>LihatSemuaDaftarBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\PrintBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\PrintBarcode.Designer.cs">
+      <DependentUpon>PrintBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\PrintStockHabis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\PrintStockHabis.Designer.cs">
+      <DependentUpon>PrintStockHabis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Purchase\SelectSupplierByItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Purchase\SelectSupplierByItem.Designer.cs">
+      <DependentUpon>SelectSupplierByItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Purchase\ViewAllPembelianByPurchaseID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Purchase\ViewAllPembelianByPurchaseID.Designer.cs">
+      <DependentUpon>ViewAllPembelianByPurchaseID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Report\ClosingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Report\ClosingReport.Designer.cs">
+      <DependentUpon>ClosingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Report\RekapInputList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\Report\RekapInputList.Designer.cs">
+      <DependentUpon>RekapInputList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Report\RekapStockInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Report\RekapStockInput.Designer.cs">
+      <DependentUpon>RekapStockInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Sales\CreateSalesStationery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Sales\CreateSalesStationery.Designer.cs">
+      <DependentUpon>CreateSalesStationery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Sales\DetailMiniItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stationery\Sales\DetailMiniItem.Designer.cs">
+      <DependentUpon>DetailMiniItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\InputBarangByBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\MsBarang\InputBarangByBarcode.Designer.cs">
+      <DependentUpon>InputBarangByBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Sales\PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Sales\PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stationery\Sales\StampCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stationery\Sales\StampCashier.Designer.cs">
+      <DependentUpon>StampCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timer\SettingTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timer\SettingTimer.Designer.cs">
+      <DependentUpon>SettingTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timer\TimerItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Timer\TimerItem.Designer.cs">
+      <DependentUpon>TimerItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Barcode.cs" />
+    <Compile Include="Util\Converter.cs" />
+    <Compile Include="Util\MathPlus.cs" />
+    <Compile Include="Util\PrintingDetailCustomer.cs" />
+    <Compile Include="Util\PrintingTimerNota.cs" />
+    <Compile Include="Util\PVCSalesNota.cs" />
+    <Compile Include="Util\PVCTransferNota.cs" />
+    <Compile Include="Util\RawPrinterHelper.cs" />
+    <EmbeddedResource Include="DialogBox\LoginBox.resx">
+      <DependentUpon>LoginBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\StationeryCashierForm.resx">
+      <DependentUpon>StationeryCashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\SupervisorForm.resx">
+      <DependentUpon>SupervisorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\AnsBox.resx">
+      <DependentUpon>AnsBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Form\QtyBox.resx">
+      <DependentUpon>QtyBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\PrintCustomerDetail.resx">
+      <DependentUpon>PrintCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Employee\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PVC\AddNewPVC.resx">
+      <DependentUpon>AddNewPVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PVC\UpdatePricePVC.resx">
+      <DependentUpon>UpdatePricePVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PVC\UpdateStockPVC.resx">
+      <DependentUpon>UpdateStockPVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Report\ClosingReport.resx">
+      <DependentUpon>ClosingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Report\HutangPerCustomer.resx">
+      <DependentUpon>HutangPerCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\CreateSalesPayment.resx">
+      <DependentUpon>CreateSalesPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\CreateSalesPrinting.resx">
+      <DependentUpon>CreateSalesPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\FilterShowSales.resx">
+      <DependentUpon>FilterShowSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\PurchaseOrder\OpenPDF.resx">
+      <DependentUpon>OpenPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\PurchaseOrder\UploadPO.resx">
+      <DependentUpon>UploadPO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SalesClone\PrintingManualEditSales.resx">
+      <DependentUpon>PrintingManualEditSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SalesClone\PrintingManualSales.resx">
+      <DependentUpon>PrintingManualSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SalesClone\PrintingSalesCloneEditDetail.resx">
+      <DependentUpon>PrintingSalesCloneEditDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SalesClone\PrintingSalesCloneEditHeader.resx">
+      <DependentUpon>PrintingSalesCloneEditHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\ShowCustomerDetail.resx">
+      <DependentUpon>ShowCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\ShowSalesPrinting.resx">
+      <DependentUpon>ShowSalesPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSales\ChangePaymentSalesPrinting.resx">
+      <DependentUpon>ChangePaymentSalesPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSales\PrintingCreateSalesList.resx">
+      <DependentUpon>PrintingCreateSalesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSales\SubSalesFinishing.resx">
+      <DependentUpon>SubSalesFinishing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSales\SubSalesFinishingDetail.resx">
+      <DependentUpon>SubSalesFinishingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSales\SubSalesOffset.resx">
+      <DependentUpon>SubSalesOffset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSales\SubSalesSetting.resx">
+      <DependentUpon>SubSalesSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSuratJalan\CreateSuratJalanList.resx">
+      <DependentUpon>CreateSuratJalanList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSuratJalan\CreateSuratJalanManual.resx">
+      <DependentUpon>CreateSuratJalanManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\SubSuratJalan\EditSuratJalanList.resx">
+      <DependentUpon>EditSuratJalanList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\Sales\TukerFaktur\CreateTandaTerima.resx">
+      <DependentUpon>CreateTandaTerima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Master\Customer\AddCompany.resx">
+      <DependentUpon>AddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\AddParentCompany.resx">
+      <DependentUpon>AddParentCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\SearchCustomerPVC.resx">
+      <DependentUpon>SearchCustomerPVC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PVC\SearchPVC.resx">
+      <DependentUpon>SearchPVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Report\ClosingReport.resx">
+      <DependentUpon>ClosingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\CreateSalesPVC.resx">
+      <DependentUpon>CreateSalesPVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\PVCSalesPayment.resx">
+      <DependentUpon>PVCSalesPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\PVCSalesUpdateDetail.resx">
+      <DependentUpon>PVCSalesUpdateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\PVCSalesUpdateList.resx">
+      <DependentUpon>PVCSalesUpdateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\SalesPaymentPerCustomer.resx">
+      <DependentUpon>SalesPaymentPerCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\SalesPVCList.resx">
+      <DependentUpon>SalesPVCList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\ViewAllSales.resx">
+      <DependentUpon>ViewAllSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\ViewSalesPVCCreatePayment.resx">
+      <DependentUpon>ViewSalesPVCCreatePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\ViewSalesPVCList.resx">
+      <DependentUpon>ViewSalesPVCList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Transfer\PVCNewTransfer.resx">
+      <DependentUpon>PVCNewTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Transfer\TransferPVCList.resx">
+      <DependentUpon>TransferPVCList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\NotaManualSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NotaManualSales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingOfferingLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingOfferingLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesAllDebt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesAllDebt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesDebtPerCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesDebtPerCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesDetailPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesDetailPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesInvoiceKecil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesInvoiceKecil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesSubReportFinishing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesSubReportFinishing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesSubReportPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesSubReportPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesSuratJalan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesSuratJalan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesTandaTerima.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesTandaTerima.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintingSales\PrintingSalesWorkOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintingSalesWorkOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanHutangKeseluruhan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanHutangKeseluruhan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanPenjualanHarian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPenjualanHarian.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanPenjualanHarianGroup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPenjualanHarianGroup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanPenjualanHarianIncome.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPenjualanHarianIncome.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanStockManual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanStockManual.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanTransferStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanTransferStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanBedaStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanBedaStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanHabisStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanHabisStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanHarian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanHarian.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanHarianGroup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanHarianGroup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanMsBarang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanMsBarang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanPembelianHarian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPembelianHarian.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanPermintaanPerubahanHarga.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPermintaanPerubahanHarga.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanRekapAkhir.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanRekapAkhir.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Stationery\LaporanRekapAwal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanRekapAwal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\SearchBarangStationery.resx">
+      <DependentUpon>SearchBarangStationery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\SearchEmployee.resx">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\GodHands\StationeryGodHands.resx">
+      <DependentUpon>StationeryGodHands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\DetailBukaPackList.resx">
+      <DependentUpon>DetailBukaPackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\StationeryBukaPack.resx">
+      <DependentUpon>StationeryBukaPack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsSupplier\AddNewSupplier.resx">
+      <DependentUpon>AddNewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsSupplier\ListSupplier.resx">
+      <DependentUpon>ListSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsSupplier\ViewSupplier.resx">
+      <DependentUpon>ViewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Purchase\DetailPembelian.resx">
+      <DependentUpon>DetailPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Purchase\InputPembelian.resx">
+      <DependentUpon>InputPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Purchase\DetailBarangInputPembelian.resx">
+      <DependentUpon>DetailBarangInputPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\DetailBarangInputStock.resx">
+      <DependentUpon>DetailBarangInputStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\InputStockByBarang.resx">
+      <DependentUpon>InputStockByBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\LihatSemuaDaftarBarang.resx">
+      <DependentUpon>LihatSemuaDaftarBarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\PrintBarcode.resx">
+      <DependentUpon>PrintBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\PrintStockHabis.resx">
+      <DependentUpon>PrintStockHabis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Purchase\SelectSupplierByItem.resx">
+      <DependentUpon>SelectSupplierByItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Purchase\ViewAllPembelianByPurchaseID.resx">
+      <DependentUpon>ViewAllPembelianByPurchaseID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Report\ClosingReport.resx">
+      <DependentUpon>ClosingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Report\RekapInputList.resx">
+      <DependentUpon>RekapInputList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Report\RekapStockInput.resx">
+      <DependentUpon>RekapStockInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Sales\CreateSalesStationery.resx">
+      <DependentUpon>CreateSalesStationery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Sales\DetailMiniItem.resx">
+      <DependentUpon>DetailMiniItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\MsBarang\InputBarangByBarcode.resx">
+      <DependentUpon>InputBarangByBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Sales\PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stationery\Sales\StampCashier.resx">
+      <DependentUpon>StampCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer\SettingTimer.resx">
+      <DependentUpon>SettingTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer\TimerItem.resx">
+      <DependentUpon>TimerItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="PrintingDataSet.xsc">
+      <DependentUpon>PrintingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrintingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PrintingDataSet.xss">
+      <DependentUpon>PrintingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PVCDS.xsc">
+      <DependentUpon>PVCDS.xsd</DependentUpon>
+    </None>
+    <None Include="PVCDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PVCDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PVCDS.xss">
+      <DependentUpon>PVCDS.xsd</DependentUpon>
+    </None>
+    <None Include="StationeryDS.xsc">
+      <DependentUpon>StationeryDS.xsd</DependentUpon>
+    </None>
+    <None Include="StationeryDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StationeryDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StationeryDS.xss">
+      <DependentUpon>StationeryDS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Printing\Purchase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

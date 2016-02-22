@@ -1,0 +1,314 @@
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe.config
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.pdb
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\bin\Debug\OnBarcode.Barcode.WinForms.dll
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.LoginBox.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.SupervisorForm.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.MainForm.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Other.QtyBox.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Properties.Resources.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Report.ReportForm.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ListSupplier.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ViewSupplier.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailPembelian.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.InputPembelian.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailBarangInputPembelian.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBarangInputStock.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.InputStockByBarang.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.LihatSemuaDaftarBarang.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintBarcode.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintStockHabis.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.ClosingReport.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapInputList.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapStockInput.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.CreateSalesStationery.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.DetailMiniItem.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.InputBarangByBarcode.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.PaymentForm.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.exe
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.pdb
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.AddNewSupplier.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.SelectSupplierByItem.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.ViewAllPembelianByPurchaseID.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Report.ClosingReport.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.MsCustomer.SearchCustomerPVC.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.CreateSalesPVC.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.MsCustomer.AddParentCompany.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.MsCustomer.AddCompany.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.MsCustomer.AddCustomer.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.PVC.SearchPVC.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPVCList.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesPayment.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.AnsBox.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.MsgBox.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewAllSales.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPayment.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCList.resources
+D:\New Rahayu Program\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPaymentPerCustomer.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe.config
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.exe
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.pdb
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.pdb
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\bin\Debug\OnBarcode.Barcode.WinForms.dll
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.LoginBox.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.SupervisorForm.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.MainForm.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.AnsBox.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.MsgBox.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Other.QtyBox.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Properties.Resources.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Report.ClosingReport.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.CreateSalesPVC.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesPayment.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPaymentPerCustomer.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPVCList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewAllSales.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Report.ReportForm.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.AddNewSupplier.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ListSupplier.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ViewSupplier.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailPembelian.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.InputPembelian.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailBarangInputPembelian.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBarangInputStock.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.InputStockByBarang.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.LihatSemuaDaftarBarang.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintBarcode.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintStockHabis.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.SelectSupplierByItem.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.ViewAllPembelianByPurchaseID.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.ClosingReport.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapInputList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapStockInput.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.CreateSalesStationery.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.DetailMiniItem.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.InputBarangByBarcode.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.PaymentForm.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csproj.GenerateResource.Cache
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.LoginBox.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.StationeryCashierForm.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.SupervisorForm.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.MainForm.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.AnsBox.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.MsgBox.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Other.QtyBox.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.AddNewPVC.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.UpdateStockPVC.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.CreateSalesPrinting.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingManualSales.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.ShowCustomerDetail.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.PrintingCreateSalesList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Properties.Resources.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddCompany.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddCustomer.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddParentCompany.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.SearchCustomerPVC.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.SearchPVC.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Report.ClosingReport.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.CreateSalesPVC.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesPayment.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesUpdateDetail.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesUpdateList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPaymentPerCustomer.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPVCList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewAllSales.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCCreatePayment.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Transfer.PVCNewTransfer.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Transfer.TransferPVCList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Report.ReportForm.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Search.SearchBarangStationery.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Search.SearchEmployee.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.GodHands.StationeryGodHands.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBukaPackList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.StationeryBukaPack.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.AddNewSupplier.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ListSupplier.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ViewSupplier.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailPembelian.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.InputPembelian.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailBarangInputPembelian.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBarangInputStock.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.InputStockByBarang.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.LihatSemuaDaftarBarang.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintBarcode.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintStockHabis.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.SelectSupplierByItem.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.ViewAllPembelianByPurchaseID.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.ClosingReport.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapInputList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapStockInput.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.CreateSalesStationery.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.DetailMiniItem.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.InputBarangByBarcode.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.PaymentForm.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.SettingTimer.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.TimerItem.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csproj.GenerateResource.Cache
+D:\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe.config
+D:\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe
+D:\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.pdb
+D:\New Rahayu Program\New Rahayu Program\bin\Debug\OnBarcode.Barcode.WinForms.dll
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.exe
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.pdb
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingManualEditSales.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingSalesCloneEditHeader.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingSalesCloneEditDetail.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.UpdatePricePVC.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csprojResolveAssemblyReference.cache
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesOffset.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesFinishing.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesFinishingDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.StationeryCashierForm.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.AddNewPVC.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.UpdatePricePVC.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.UpdateStockPVC.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.CreateSalesPrinting.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingManualEditSales.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingManualSales.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingSalesCloneEditDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingSalesCloneEditHeader.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.ShowCustomerDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.PrintingCreateSalesList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesFinishing.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesFinishingDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesOffset.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddCompany.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddCustomer.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddParentCompany.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.SearchCustomerPVC.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.SearchPVC.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesUpdateDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesUpdateList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCCreatePayment.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Transfer.PVCNewTransfer.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Transfer.TransferPVCList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Search.SearchBarangStationery.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Search.SearchEmployee.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.GodHands.StationeryGodHands.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBukaPackList.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.StationeryBukaPack.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.SettingTimer.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.TimerItem.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.ShowSalesPrinting.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.CreateSalesPayment.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.CreateSalesPayment.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.ShowSalesPrinting.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.PrintCustomerDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.PrintCustomerDetail.resources
+C:\Users\USER\Desktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.ChangePaymentSalesPrinting.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.ChangePaymentSalesPrinting.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe.config
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.exe
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.pdb
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Report.ClosingReport.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.exe
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\bin\Debug\New Rahayu Program.pdb
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\bin\Debug\OnBarcode.Barcode.WinForms.dll
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csprojResolveAssemblyReference.cache
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.LoginBox.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.StationeryCashierForm.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.SupervisorForm.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.MainForm.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.AnsBox.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.DialogBox.MsgBox.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Other.QtyBox.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.PrintCustomerDetail.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.AddNewPVC.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.UpdatePricePVC.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.UpdateStockPVC.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Report.ClosingReport.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.CreateSalesPayment.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.CreateSalesPrinting.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingManualEditSales.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingManualSales.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingSalesCloneEditDetail.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SalesClone.PrintingSalesCloneEditHeader.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.ShowCustomerDetail.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.ShowSalesPrinting.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.ChangePaymentSalesPrinting.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.PrintingCreateSalesList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesFinishing.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesFinishingDetail.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesOffset.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Properties.Resources.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddCompany.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddCustomer.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.AddParentCompany.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.SearchCustomerPVC.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.PVC.SearchPVC.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Report.ClosingReport.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.CreateSalesPVC.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesPayment.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesUpdateDetail.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCSalesUpdateList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPaymentPerCustomer.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.SalesPVCList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewAllSales.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCCreatePayment.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.ViewSalesPVCList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Transfer.PVCNewTransfer.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Transfer.TransferPVCList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Report.ReportForm.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Search.SearchBarangStationery.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Search.SearchEmployee.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.GodHands.StationeryGodHands.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBukaPackList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.StationeryBukaPack.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.AddNewSupplier.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ListSupplier.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsSupplier.ViewSupplier.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailPembelian.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.InputPembelian.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.DetailBarangInputPembelian.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.DetailBarangInputStock.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.InputStockByBarang.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.LihatSemuaDaftarBarang.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintBarcode.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.MsBarang.PrintStockHabis.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.SelectSupplierByItem.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Purchase.ViewAllPembelianByPurchaseID.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.ClosingReport.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapInputList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Report.RekapStockInput.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.CreateSalesStationery.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.DetailMiniItem.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.InputBarangByBarcode.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.PaymentForm.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.SettingTimer.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.TimerItem.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csproj.GenerateResource.Cache
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Report.HutangPerCustomer.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Report.HutangPerCustomer.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSuratJalan.CreateSuratJalanList.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSuratJalan.CreateSuratJalanManual.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSuratJalan.EditSuratJalanList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSuratJalan.CreateSuratJalanList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSuratJalan.CreateSuratJalanManual.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSuratJalan.EditSuratJalanList.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.TukerFaktur.CreateTandaTerima.resources
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csproj.ResolveComReference.cache
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\bin\Debug\Interop.AcroPDFLib.dll
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.PurchaseOrder.OpenPDF.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Interop.AcroPDFLib.dll
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\AxInterop.AcroPDFLib.dll
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csproj.ResolveComReference.cache
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.PurchaseOrder.OpenPDF.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.PurchaseOrder.UploadPO.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.TukerFaktur.CreateTandaTerima.resources
+D:\New Rahayu Program\New Rahayu Program\bin\Debug\Interop.AcroPDFLib.dll
+D:\New Rahayu Program\New Rahayu Program\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\PROGRAM\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.PurchaseOrder.UploadPO.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.FilterShowSales.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesSetting.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.StampCashier.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Employee.ChangePassword.resources
