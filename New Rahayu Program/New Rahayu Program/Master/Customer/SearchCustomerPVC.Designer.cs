@@ -251,6 +251,7 @@
             this.btnUpdateCustomer.Size = new System.Drawing.Size(100, 50);
             this.btnUpdateCustomer.TabIndex = 19;
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
             // 
             // btnAddParent
             // 
@@ -276,6 +277,7 @@
             this.btnDeleteCustomer.Size = new System.Drawing.Size(100, 50);
             this.btnDeleteCustomer.TabIndex = 20;
             this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.Visible = false;
             this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // btnDeleteCompany
@@ -289,6 +291,7 @@
             this.btnDeleteCompany.Size = new System.Drawing.Size(100, 50);
             this.btnDeleteCompany.TabIndex = 14;
             this.btnDeleteCompany.UseVisualStyleBackColor = true;
+            this.btnDeleteCompany.Visible = false;
             this.btnDeleteCompany.Click += new System.EventHandler(this.btnDeleteCompany_Click);
             // 
             // btnDeleteParent
@@ -302,6 +305,7 @@
             this.btnDeleteParent.Size = new System.Drawing.Size(100, 50);
             this.btnDeleteParent.TabIndex = 8;
             this.btnDeleteParent.UseVisualStyleBackColor = true;
+            this.btnDeleteParent.Visible = false;
             this.btnDeleteParent.Click += new System.EventHandler(this.btnDeleteParent_Click);
             // 
             // btnOK
@@ -422,6 +426,7 @@
             this.btnUpdateCustomerName.Size = new System.Drawing.Size(29, 29);
             this.btnUpdateCustomerName.TabIndex = 25;
             this.btnUpdateCustomerName.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomerName.Visible = false;
             this.btnUpdateCustomerName.Click += new System.EventHandler(this.btnUpdateCustomerName_Click);
             // 
             // btnUpdateCustomerAddress
@@ -435,6 +440,7 @@
             this.btnUpdateCustomerAddress.Size = new System.Drawing.Size(25, 25);
             this.btnUpdateCustomerAddress.TabIndex = 25;
             this.btnUpdateCustomerAddress.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomerAddress.Visible = false;
             this.btnUpdateCustomerAddress.Click += new System.EventHandler(this.btnUpdateCustomerAddress_Click);
             // 
             // btnUpdateCompanyPhone
@@ -461,6 +467,7 @@
             this.btnUpdateCustomerPhone.Size = new System.Drawing.Size(25, 25);
             this.btnUpdateCustomerPhone.TabIndex = 25;
             this.btnUpdateCustomerPhone.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomerPhone.Visible = false;
             this.btnUpdateCustomerPhone.Click += new System.EventHandler(this.btnUpdateCustomerPhone_Click);
             // 
             // btnSearch

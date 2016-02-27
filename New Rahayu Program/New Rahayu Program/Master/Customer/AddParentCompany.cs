@@ -12,10 +12,12 @@ namespace Rahayu_Program.Master.Customer
     public partial class AddParentCompany : Form
     {
         MainForm main;
+        Boolean hide;
 
         public AddParentCompany(MainForm main)
         {
             this.main = main;
+            hide = false;
             InitializeComponent();
         }
 
@@ -34,7 +36,10 @@ namespace Rahayu_Program.Master.Customer
             if (tbParentCompanyName.Text != "Parent Company Name")
                 if (tbParentCompanyName.Text.Length > 3)
                 {
-                    ExecuteQuery("INSERT INTO MsParentCompany(parentCompanyName) VALUES ('" + tbParentCompanyName.Text + "')");
+                    if (hide == false)
+                        ExecuteQuery("INSERT INTO MsParentCompany(parentCompanyName) VALUES ('" + tbParentCompanyName.Text + "')");
+                    else
+                        ExecuteQuery("INSERT INTO MsParentCompany(parentCompanyName, parentAliases) VALUES ('No ParentCompany', '" + tbParentCompanyName.Text + "')");
 
                     DialogResult = System.Windows.Forms.DialogResult.OK;
                 }
@@ -99,6 +104,27 @@ namespace Rahayu_Program.Master.Customer
             {
                 btnCancel_Click(sender, e);
             }
+        }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            if (hide == true)
+            {
+                btnHide.BackColor = Color.Red;
+                hide = false;
+                tbNote.Text = "NO HIDE : Nama diatas akan MUNCUL di nota!";
+            }
+            else
+            {
+                btnHide.BackColor = Color.YellowGreen;
+                hide = true;
+                tbNote.Text = "HIDE : Nama TIDAK MUNCUL di nota!";
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            btnAddParent.Focus();
         }
     }
 }

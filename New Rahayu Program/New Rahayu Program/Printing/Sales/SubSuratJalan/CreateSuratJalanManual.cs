@@ -150,7 +150,7 @@ namespace Rahayu_Program.Printing.Sales.SubSuratJalan
             dt.Columns.Add("description");
             foreach (CreateSuratJalanList i in detail)
             {
-                dt.Rows.Add(String.Format("{0:D10}", printingSalesID), tbCompanyName.Text, tbCustomerName.Text, tbCustomerPhone.Text, dtpSuratJalan.Value.ToString("ddd, dd MMM yy - HH:mm"), tbPlatNomor.Text, tbAddress.Text, tbPesan.Text, i.printingTitle, i.description);
+                dt.Rows.Add(String.Format("{0:D10}", printingSalesID), tbCompanyName.Text, tbCustomerName.Text, tbCustomerPhone.Text, dtpSuratJalan.Value.ToString("ddd, dd MMM yy - HH:mm"), tbPlatNomor.Text, tbAddress.Text.Replace(System.Environment.NewLine, "; "), tbPesan.Text, i.printingTitle, i.description);
             }
             if (dt == null)
             {

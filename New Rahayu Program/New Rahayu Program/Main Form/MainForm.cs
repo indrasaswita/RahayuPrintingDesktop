@@ -100,10 +100,10 @@ namespace Rahayu_Program
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            SerialPort port = new SerialPort("COM4", 2400, Parity.None, 8, StopBits.One);
-            port.Open();
-            port.Write(" ");
-            port.Close();
+            //SerialPort port = new SerialPort("COM4", 2400, Parity.None, 8, StopBits.One);
+            //port.Open();
+            //port.Write(" ");
+            //port.Close();
 
             //string txt = "1234567890 12345678901234567890 12345678901234567890 12345678901234567890 12345678901234567890 12345678901234567890 12345678901234567890 12345678901234567890";
             //MessageBox.Show(txt.Length + "");

@@ -312,3 +312,4 @@ D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.S
 D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Printing.Sales.SubSales.SubSalesSetting.resources
 D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Stationery.Sales.StampCashier.resources
 D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Employee.ChangePassword.resources
+D:\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Master.Customer.ChangeCustomer.resources

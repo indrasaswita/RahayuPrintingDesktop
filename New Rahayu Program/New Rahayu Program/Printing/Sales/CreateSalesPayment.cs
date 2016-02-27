@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Rahayu_Program.DialogBox;
+using System.Net.Sockets;
 
 namespace Rahayu_Program.Printing.Sales
 {
@@ -70,9 +71,42 @@ namespace Rahayu_Program.Printing.Sales
                     int paymentID = (dt != null) ? (dt.Rows.Count == 1) ? (Int32.Parse(dt.Rows[0]["paymentID"].ToString()) + 1) : 1 : 1;
                     ExecuteQuery("INSERT INTO PrintingSalesPayment VALUES ('" + salesID + "', '" + paymentID + "', now(), '" + nudPembayaran.Value + "', '" + nudPembayaran2.Value + "', '', '" + method + "', '')");
 
+                    if (method == "CASH")
+                    {
+                        ConnPrintingCashDrawer();
+                        OpenPrintingCashDrawer();
+                        ClosePrintingCashDrawer();
+                    }
+
                     DialogResult = System.Windows.Forms.DialogResult.OK;
                 }
             }
+        }
+
+        System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();
+
+        private void ConnPrintingCashDrawer()
+        {
+
+            clientSocket.Connect(@"RHY-INDRA-PC", 8888);
+        }
+
+        private void ClosePrintingCashDrawer()
+        {
+            clientSocket.Close();
+        }
+
+        private void OpenPrintingCashDrawer()
+        {
+            NetworkStream serverStream = clientSocket.GetStream();
+            byte[] outStream = System.Text.Encoding.ASCII.GetBytes("BUKA" + "$");
+            serverStream.Write(outStream, 0, outStream.Length);
+            serverStream.Flush();
+
+            byte[] inStream = new byte[10025];
+            serverStream.Read(inStream, 0, (int)clientSocket.ReceiveBufferSize);
+            /*string returndata = System.Text.Encoding.ASCII.GetString(inStream);
+            msg(returndata);*/
         }
 
         private void button6_Click(object sender, EventArgs e)

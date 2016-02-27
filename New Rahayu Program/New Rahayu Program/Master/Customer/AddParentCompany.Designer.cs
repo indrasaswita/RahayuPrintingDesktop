@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddParentCompany));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbParentCompanyName = new System.Windows.Forms.TextBox();
             this.btnAddParent = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnHide = new System.Windows.Forms.Button();
+            this.tbNote = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,14 +46,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -79,7 +81,7 @@
             this.btnAddParent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddParent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddParent.ForeColor = System.Drawing.Color.White;
-            this.btnAddParent.Location = new System.Drawing.Point(133, 438);
+            this.btnAddParent.Location = new System.Drawing.Point(105, 466);
             this.btnAddParent.Name = "btnAddParent";
             this.btnAddParent.Size = new System.Drawing.Size(100, 50);
             this.btnAddParent.TabIndex = 2;
@@ -93,7 +95,7 @@
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(239, 438);
+            this.btnCancel.Location = new System.Drawing.Point(267, 466);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 50);
             this.btnCancel.TabIndex = 3;
@@ -101,12 +103,41 @@
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             this.btnCancel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnCancel_KeyDown);
             // 
+            // btnHide
+            // 
+            this.btnHide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHide.BackgroundImage")));
+            this.btnHide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHide.ForeColor = System.Drawing.Color.White;
+            this.btnHide.Location = new System.Drawing.Point(211, 466);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(50, 50);
+            this.btnHide.TabIndex = 4;
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // tbNote
+            // 
+            this.tbNote.BackColor = System.Drawing.Color.DeepPink;
+            this.tbNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNote.ForeColor = System.Drawing.Color.White;
+            this.tbNote.Location = new System.Drawing.Point(13, 436);
+            this.tbNote.Name = "tbNote";
+            this.tbNote.ReadOnly = true;
+            this.tbNote.Size = new System.Drawing.Size(448, 22);
+            this.tbNote.TabIndex = 5;
+            this.tbNote.Text = "NO HIDE : Nama diatas akan muncul ke NOTA";
+            this.tbNote.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNote.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
             // AddParentCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepPink;
-            this.ClientSize = new System.Drawing.Size(473, 502);
+            this.ClientSize = new System.Drawing.Size(473, 528);
+            this.Controls.Add(this.tbNote);
+            this.Controls.Add(this.btnHide);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddParent);
             this.Controls.Add(this.tbParentCompanyName);
@@ -131,6 +162,8 @@
         private System.Windows.Forms.TextBox tbParentCompanyName;
         private System.Windows.Forms.Button btnAddParent;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnHide;
+        private System.Windows.Forms.TextBox tbNote;
 
     }
 }

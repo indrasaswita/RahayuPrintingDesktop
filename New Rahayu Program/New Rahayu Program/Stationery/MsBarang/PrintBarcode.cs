@@ -208,7 +208,7 @@ namespace Rahayu_Program.Stationery.MsBarang
 
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(printPage);
-            pd.PrinterSettings.PrinterName = "ZDesigner GK420t";
+            pd.PrinterSettings.PrinterName = System.IO.File.ReadAllText(Application.StartupPath + @"\config\printer\stationery-barcode.is");
             pd.PrintController = new StandardPrintController();
 
             try

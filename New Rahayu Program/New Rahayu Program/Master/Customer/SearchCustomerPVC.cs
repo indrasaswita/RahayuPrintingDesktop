@@ -38,7 +38,9 @@ namespace Rahayu_Program.Master.Customer
                     for (int i = 0; i < dtParent.Rows.Count; i++)
                     {
                         string parentID = dtParent.Rows[i]["parentCompanyID"].ToString();
-                        treeCust.Nodes.Add(parentID, dtParent.Rows[i]["parentCompanyName"].ToString());
+                        string pAlias = dtParent.Rows[i]["parentAliases"].ToString();
+                        string parentName = dtParent.Rows[i]["parentCompanyName"].ToString() + (pAlias.Trim() != "" ? "(" + pAlias + ")" : "");
+                        treeCust.Nodes.Add(parentID, parentName);
                         dtCompany = ExecuteQuery("SELECT * FROM MsCompany WHERE parentCompanyID = " + parentID + " ORDER BY companyName");
                         for (int j = 0; j < dtCompany.Rows.Count; j++)
                         {
@@ -86,7 +88,9 @@ namespace Rahayu_Program.Master.Customer
                 for (int i = 0; i < dtParent.Rows.Count; i++)
                 {
                     string parentID = dtParent.Rows[i]["parentCompanyID"].ToString();
-                    string parentName = dtParent.Rows[i]["parentCompanyName"].ToString();
+                    string pAlias = dtParent.Rows[i]["parentAliases"].ToString();
+                    string parentName = dtParent.Rows[i]["parentCompanyName"].ToString() + (pAlias.Trim() != "" ? "(" + pAlias + ")" : "");
+
                     if(parentName.ToLower().IndexOf(search) != -1)
                     {
                         //KALO KETEMU DI PARENT, BRARTI DI MUNCULIN SEMUA
@@ -556,6 +560,22 @@ namespace Rahayu_Program.Master.Customer
                 tbCustomerPhone.Text = "";
                 tbCustomerAddress.Text = "";
                 tbCustomerName.Text = "";
+            }
+        }
+
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
+        {
+            if (tbCustomerID.Text.Trim() != "")
+            {
+                ChangeCustomer changeCust = new ChangeCustomer(main, Int32.Parse(tbCustomerID.Text.Trim()));
+                DialogResult result = changeCust.ShowDialog();
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (tbSearch.Text != "")
+                        refreshData(tbSearch.Text);
+                    else
+                        refreshData();
+                }
             }
         }
     }

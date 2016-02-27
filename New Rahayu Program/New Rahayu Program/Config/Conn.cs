@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Rahayu_Program.Config
 {
     class Conn
     {
-        private String connString  = "Server=192.168.100.198;User Id=root;Password=;Database=k5451408_rahayu";
+        private String connString;
         private MySqlConnection mySqlConnection;
         private DataTable dt;
         private DataSet ds;
@@ -17,6 +18,17 @@ namespace Rahayu_Program.Config
 
         public void Connect()
         {
+            string path = Application.StartupPath + @"\config\conn\connstr.is";
+            if (!System.IO.File.Exists(path))
+            {
+                MessageBox.Show("CONNSTR TIDAK KETEMU");
+                Application.Exit();
+            }
+            else
+            {
+                connString = System.IO.File.ReadAllText(path);
+            }
+
             mySqlConnection = new MySqlConnection();
             mySqlConnection.ConnectionString = connString;
 
