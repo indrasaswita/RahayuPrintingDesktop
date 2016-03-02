@@ -18,11 +18,22 @@ namespace Rahayu_Program.Printing.Report
     public partial class HutangPerCustomer : Form
     {
         MainForm main;
+        int customerID;
 
         public HutangPerCustomer(MainForm main)
         {
             this.main = main;
             this.MdiParent = main;
+            customerID = 0;
+
+            InitializeComponent();
+        }
+
+        public HutangPerCustomer(MainForm main, int customerID)
+        {
+            this.main = main;
+            this.MdiParent = main;
+            this.customerID = customerID;
 
             InitializeComponent();
         }
@@ -73,80 +84,89 @@ namespace Rahayu_Program.Printing.Report
         Rahayu_Program.Report.PrintingSales.PrintingSalesDebtPerCustomer laporan;
         string filename = "";
 
+        private void setCustomerFromID(int customerID)
+        {
+            DataTable dd = main.ExecuteQuery("SELECT phone, phone2, email FROM MsCustomer WHERE customerID = '" + customerID + "'");
+            if (dd != null)
+                if (dd.Rows.Count == 1)
+                {
+                    string email = dd.Rows[0]["email"].ToString();
+                    if (email.Trim() != "")
+                        gridAddress.Rows.Add(email);
+                    tbCustomerCompany.Text = main.globalCompanyName;
+                    tbCustomerName.Text = main.globalCustomerName;
+                    tbCustomerPhone.Text = dd.Rows[0]["phone"].ToString() + (dd.Rows[0]["phone2"].ToString().Trim() == "" ? "" : "/" + dd.Rows[0]["phone2"].ToString());
+                }
+        }
+
+        private void createDebtReport(int customerID)
+        {
+            string filter = "";
+            if (radJatuhTempo.Checked)
+            {
+                filter = " AND psh.tempo <= now() ";
+            }
+            else
+            {
+                filter = "";
+            }
+
+            DataTable dt = main.ExecuteQuery("SELECT psh.printingSalesID, salesTime, "
+                    + "'' AS customerName, "
+                    + "tempo, printingType, printingTitle, jobType, "
+                    + "CONCAT(material, '; ', quantity, '; ', quantityType, '; ', sidePrint, ')') AS detail"
+                    + ", hargaMaterial, hargaOngkosCetak, hargaAsli, "
+                    + "IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment "
+                    + "WHERE printingSalesID = psh.printingSalesID), 0) AS paymentTotal "
+                + "FROM PrintingSalesHeader psh "
+                    + "JOIN PrintingSalesDetail psd ON psh.printingSalesID = psd.printingSalesID "
+                    + "JOIN MsCustomer cu ON cu.customerID = psh.customerID "
+                + "WHERE psh.customerID = '" + customerID + "' " + filter
+                + "AND hargaAsli > IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment "
+                + "WHERE printingSalesID = psh.printingSalesID), 0)");
+
+            if (dt == null)
+            {
+                MessageBox.Show("ERROR PRINT REPORT (LAPORAN HUTANG PERCUSTOMER)");
+                this.Dispose();
+            }
+            else
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    laporan = new Rahayu_Program.Report.PrintingSales.PrintingSalesDebtPerCustomer();
+
+                    laporan.SetDataSource(dt);
+                    filename = @"C:\laporan" + tbCustomerName.Text.Replace(" ", "") + "(" + DateTime.Now.ToString("ddMMyy") + ").pdf";
+                    tbAttachment.Text = filename;
+                    laporan.SetParameterValue("startTime", DateTime.MinValue);
+                    laporan.SetParameterValue("endTime", DateTime.MaxValue);
+                    laporan.ExportToDisk(ExportFormatType.PortableDocFormat, filename);
+
+                    rtbIsiEmail.Text = "Kepada Yth.,\nBapak/Ibu " + tbCustomerName.Text + ".\ndi tempat."
+                        + "\n\nBerikut ini kami kirimkan data kekurangan bayar untuk transaksi di Rahayu."
+                        + "\nTerima kasih atas kerja samanya, kami berharap secepatnya dapat dilunasi."
+                        + "\n\nUntuk transfer,"
+                        + "\nRekening BCA:"
+                        + "\nNO. 419 152 6168"
+                        + "\na/n. Wahyuni Saswita";
+                }
+                else
+                {
+                    filename = "";
+                    MessageBox.Show("CUSTOMER INI TIDAK PUNYA HUTANG BROOO");
+                }
+            }
+        }
+
         private void btnSearchCustomer_Click(object sender, EventArgs e)
         {
             SearchCustomerPVC searchCust = new SearchCustomerPVC(main);
             DialogResult result = searchCust.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                DataTable dd = main.ExecuteQuery("SELECT phone, phone2, email FROM MsCustomer WHERE customerID = '" + main.globalCustomerID + "'");
-                if (dd != null) 
-                    if (dd.Rows.Count == 1)
-                    {
-                        string email = dd.Rows[0]["email"].ToString();
-                        if (email.Trim() != "")
-                            gridAddress.Rows.Add(email);
-                        tbCustomerCompany.Text = main.globalCompanyName;
-                        tbCustomerName.Text = main.globalCustomerName;
-                        tbCustomerPhone.Text = dd.Rows[0]["phone"].ToString() + (dd.Rows[0]["phone2"].ToString().Trim() == "" ? "" : "/" + dd.Rows[0]["phone2"].ToString());
-                    }
-
-                string filter = "";
-                if (radJatuhTempo.Checked)
-                {
-                    filter = "AND psh.tempo <= now()";
-                }
-                else
-                {
-                    filter = "";
-                }
-
-                DataTable dt = main.ExecuteQuery("SELECT psh.printingSalesID, salesTime, "
-                        + "'' AS customerName, "
-                        + "tempo, printingType, printingTitle, jobType, "
-                        + "CONCAT(material, '; ', quantity, '; ', quantityType, '; ', sidePrint, ')') AS detail"
-                        + ", hargaMaterial, hargaOngkosCetak, hargaAsli, "
-                        + "IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment "
-                        + "WHERE printingSalesID = psh.printingSalesID), 0) AS paymentTotal "
-                    + "FROM PrintingSalesHeader psh "
-                        + "JOIN PrintingSalesDetail psd ON psh.printingSalesID = psd.printingSalesID "
-                        + "JOIN MsCustomer cu ON cu.customerID = psh.customerID "
-                    + "WHERE psh.customerID = '" + main.globalCustomerID + "' " + filter
-                    + "AND hargaAsli > IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment "
-                    + "WHERE printingSalesID = psh.printingSalesID), 0)");
-
-                if (dt == null)
-                {
-                    MessageBox.Show("ERROR PRINT REPORT (LAPORAN HUTANG PERCUSTOMER)");
-                    this.Dispose();
-                }
-                else
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        laporan = new Rahayu_Program.Report.PrintingSales.PrintingSalesDebtPerCustomer();
-
-                        laporan.SetDataSource(dt);
-                        filename = @"C:\laporan" + main.globalCustomerName.Replace(" ", "") + "(" + DateTime.Now.ToString("ddMMyy") + ").pdf";
-                        tbAttachment.Text = filename;
-                        laporan.SetParameterValue("startTime", DateTime.MinValue);
-                        laporan.SetParameterValue("endTime", DateTime.MaxValue);
-                        laporan.ExportToDisk(ExportFormatType.PortableDocFormat, filename);
-
-                        rtbIsiEmail.Text = "Kepada Yth.,\nBapak/Ibu " + main.globalCustomerName +".\ndi tempat."
-                            + "\n\nBerikut ini kami kirimkan data kekurangan bayar untuk transaksi di Rahayu."
-                            + "\nTerima kasih atas kerja samanya, kami berharap secepatnya dapat dilunasi."
-                            + "\n\nUntuk transfer,"
-                            + "\nRekening BCA:"
-                            + "\nNO. 419 152 6168"
-                            + "\na/n. Wahyuni Saswita";
-                    }
-                    else
-                    {
-                        filename = "";
-                        MessageBox.Show("CUSTOMER INI TIDAK PUNYA HUTANG BROOO");
-                    }
-                }
+                setCustomerFromID(main.globalCustomerID);
+                createDebtReport(main.globalCustomerID);
             }
         }
 
@@ -216,6 +236,12 @@ namespace Rahayu_Program.Printing.Report
             gridAddress.Columns.Add("", "E-mail Address");
             gridAddress.Columns[0].Width = 343;
             tbJudulEmail.Text = "Kekurangan Pembayaran";
+
+            if (customerID != 0)
+            {
+                setCustomerFromID(customerID);
+                createDebtReport(customerID);
+            }
         }
 
         private void HutangPerCustomer_FormClosed(object sender, FormClosedEventArgs e)

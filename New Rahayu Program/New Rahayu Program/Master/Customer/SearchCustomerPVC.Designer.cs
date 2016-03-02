@@ -227,6 +227,7 @@
             this.btnUpdateCompany.Size = new System.Drawing.Size(100, 50);
             this.btnUpdateCompany.TabIndex = 13;
             this.btnUpdateCompany.UseVisualStyleBackColor = true;
+            this.btnUpdateCompany.Click += new System.EventHandler(this.btnUpdateCompany_Click);
             // 
             // btnUpdateParent
             // 
@@ -239,6 +240,7 @@
             this.btnUpdateParent.Size = new System.Drawing.Size(100, 50);
             this.btnUpdateParent.TabIndex = 7;
             this.btnUpdateParent.UseVisualStyleBackColor = true;
+            this.btnUpdateParent.Click += new System.EventHandler(this.btnUpdateParent_Click);
             // 
             // btnUpdateCustomer
             // 
@@ -387,6 +389,7 @@
             this.btnUpdateParentName.Size = new System.Drawing.Size(29, 29);
             this.btnUpdateParentName.TabIndex = 25;
             this.btnUpdateParentName.UseVisualStyleBackColor = true;
+            this.btnUpdateParentName.Visible = false;
             this.btnUpdateParentName.Click += new System.EventHandler(this.btnUpdateParentName_Click);
             // 
             // btnUpdateCompanyName

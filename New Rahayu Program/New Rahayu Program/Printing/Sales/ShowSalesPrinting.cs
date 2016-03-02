@@ -20,7 +20,8 @@ namespace Rahayu_Program.Printing.Sales
     public partial class ShowSalesPrinting : Form
     {
         MainForm main;
-        string query = "SELECT psh.printingSalesID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID WHERE psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC";
+        string query = "SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID WHERE psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC";
+        int customerID;
 
         public ShowSalesPrinting(MainForm main)
         {
@@ -34,12 +35,14 @@ namespace Rahayu_Program.Printing.Sales
         {
             gridSalesHeader.Columns.Add("SalesID", "ID");
             gridSalesHeader.Columns[0].Width = 70;
+            gridSalesHeader.Columns.Add("CustomerID", "CustomerID");
+            gridSalesHeader.Columns[1].Visible = false;
             gridSalesHeader.Columns.Add("Customer", "Customer");
-            gridSalesHeader.Columns[1].Width = 250;
+            gridSalesHeader.Columns[2].Width = 250;
             gridSalesHeader.Columns.Add("Time", "Time");
-            gridSalesHeader.Columns[2].Width = 190;
+            gridSalesHeader.Columns[3].Width = 190;
             gridSalesHeader.Columns.Add("Status", "Status");
-            gridSalesHeader.Columns[3].Width = 100;
+            gridSalesHeader.Columns[4].Width = 100;
 
             gridSalesDetail.Columns.Add("JobType", "TYP");
             gridSalesDetail.Columns[0].Width = 30;
@@ -97,6 +100,7 @@ namespace Rahayu_Program.Printing.Sales
                     {
                         salesID = Int32.Parse(i["printingSalesID"].ToString());
                         string customer = i["customerName"].ToString();
+                        string customerID = i["customerID"].ToString();
                         string company = i["companyName"].ToString();
                         string gabung = (company.Trim() != "") ? company + "; " + customer : customer;
                         string time = i["salesTime"].ToString();
@@ -104,7 +108,7 @@ namespace Rahayu_Program.Printing.Sales
                         int bayar = Int32.Parse(i["bayar"].ToString());
                         int total = Int32.Parse(i["total"].ToString());
 
-                        gridSalesHeader.Rows.Add(String.Format("{0:D6}", salesID), gabung, time, status);
+                        gridSalesHeader.Rows.Add(String.Format("{0:D6}", salesID), customerID, gabung, time, status);
                         if (status == "SALE")
                         {
                             Color colorTemp = bayar == 0 ? Color.Orange : bayar < total ? Color.Yellow : Color.GreenYellow;
@@ -310,6 +314,7 @@ namespace Rahayu_Program.Printing.Sales
                 if (index >= 0 && index < gridSalesHeader.Rows.Count)
                 {
                     salesID = Int32.Parse(gridSalesHeader.Rows[index].Cells["SalesID"].Value.ToString());
+                    customerID = Int32.Parse(gridSalesHeader.Rows[index].Cells["CustomerID"].Value.ToString());
                     RefreshDetail(salesID);
                     RefreshPayment(salesID);
                     HideButtonHeader();
@@ -808,10 +813,10 @@ namespace Rahayu_Program.Printing.Sales
 
         private void btnHutangPerCust_Click(object sender, EventArgs e)
         {
-            HutangPerCustomer hutangCustomer = new HutangPerCustomer(main);
+            HutangPerCustomer hutangCustomer = (customerID == 0) ? new HutangPerCustomer(main) : new HutangPerCustomer(main, customerID);
             hutangCustomer.Show();
             hutangCustomer.BringToFront();
-            hutangCustomer.ClearAll();
+            //hutangCustomer.ClearAll();
         }
 
         string searchOn = "";

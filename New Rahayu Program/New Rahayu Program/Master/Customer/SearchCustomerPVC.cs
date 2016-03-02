@@ -577,6 +577,50 @@ namespace Rahayu_Program.Master.Customer
                         refreshData();
                 }
             }
+            else
+            {
+                main.SetMessage("Customer Belum Dipilih!");
+            }
+        }
+
+        private void btnUpdateParent_Click(object sender, EventArgs e)
+        {
+            if (tbParentID.Text.Trim() != "")
+            {
+                ChangeParentCompany changeParent = new ChangeParentCompany(main, Int32.Parse(tbParentID.Text.Trim()));
+                DialogResult result = changeParent.ShowDialog();
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (tbSearch.Text != "")
+                        refreshData(tbSearch.Text);
+                    else
+                        refreshData();
+                }
+            }
+            else
+            {
+                main.SetMessage("Parent Company Belum Dipilih!");
+            }
+        }
+
+        private void btnUpdateCompany_Click(object sender, EventArgs e)
+        {
+            if (tbCompanyID.Text.Trim() != "")
+            {
+                ChangeCompany changeCompany = new ChangeCompany(main, Int32.Parse(tbCompanyID.Text.Trim()));
+                DialogResult result = changeCompany.ShowDialog();
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (tbSearch.Text != "")
+                        refreshData(tbSearch.Text);
+                    else
+                        refreshData();
+                }
+            }
+            else
+            {
+                main.SetMessage("Parent Company Belum Dipilih!");
+            }
         }
     }
 }

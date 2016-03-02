@@ -72,11 +72,23 @@
     <Compile Include="DialogBox\StationeryCashierForm.Designer.cs">
       <DependentUpon>StationeryCashierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Customer\ChangeCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\ChangeCompany.Designer.cs">
+      <DependentUpon>ChangeCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Customer\ChangeCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Master\Customer\ChangeCustomer.Designer.cs">
       <DependentUpon>ChangeCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer\ChangeParentCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer\ChangeParentCompany.Designer.cs">
+      <DependentUpon>ChangeParentCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\Customer\PrintCustomerDetail.cs">
       <SubType>Form</SubType>
@@ -786,8 +798,14 @@
     <EmbeddedResource Include="Main Form\QtyBox.resx">
       <DependentUpon>QtyBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\ChangeCompany.resx">
+      <DependentUpon>ChangeCompany.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Customer\ChangeCustomer.resx">
       <DependentUpon>ChangeCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer\ChangeParentCompany.resx">
+      <DependentUpon>ChangeParentCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Customer\PrintCustomerDetail.resx">
       <DependentUpon>PrintCustomerDetail.cs</DependentUpon>
