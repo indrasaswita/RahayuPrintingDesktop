@@ -111,7 +111,9 @@ namespace Rahayu_Program.Printing.Report
                     + "FROM PrintingSalesHeader psh "
                         + "JOIN PrintingSalesDetail psd ON psh.printingSalesID = psd.printingSalesID "
                         + "JOIN MsCustomer cu ON cu.customerID = psh.customerID "
-                    + "WHERE psh.customerID = '" + main.globalCustomerID + "' " + filter);
+                    + "WHERE psh.customerID = '" + main.globalCustomerID + "' " + filter
+                    + "AND hargaAsli > IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment "
+                    + "WHERE printingSalesID = psh.printingSalesID), 0)");
 
                 if (dt == null)
                 {
