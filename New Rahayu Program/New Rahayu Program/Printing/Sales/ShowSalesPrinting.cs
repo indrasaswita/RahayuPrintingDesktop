@@ -20,13 +20,22 @@ namespace Rahayu_Program.Printing.Sales
     public partial class ShowSalesPrinting : Form
     {
         MainForm main;
-        string query = "SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID WHERE psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC";
+        string show = "SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID ";
+        string interval = " WHERE psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ";
+        string sortDesc = " ORDER BY psh.printingSalesID DESC ";
+        string sortAsc = " ORDER BY psh.printingSalesID ASC ";
+        string sebelomTempo = " AND tempo < now() ";
+        string sesudahTempo = " AND tempo >= now() ";
+        string sudahLunas = " AND IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment psp WHERE psp.printingSalesID = psh.printingSalesID), 0) >= IFNULL((SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail psd WHERE psd.printingSalesID = psh.printingSalesID), 0) ";
+        string belumLunas = " AND IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment psp WHERE psp.printingSalesID = psh.printingSalesID), 0) < IFNULL((SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail psd WHERE psd.printingSalesID = psh.printingSalesID), 0) ";
         int customerID;
+        string query;
 
         public ShowSalesPrinting(MainForm main)
         {
             this.main = main;
             this.MdiParent = main;
+            query = show + interval + sortDesc;
 
             InitializeComponent();
         }
@@ -803,7 +812,7 @@ namespace Rahayu_Program.Printing.Sales
 
         private void btnSearchHeader_Click(object sender, EventArgs e)
         {
-            FilterShowSales filter = new FilterShowSales(main);
+            FilterShowSales filter = new FilterShowSales(main, show, interval);
             DialogResult result = filter.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
@@ -843,7 +852,7 @@ namespace Rahayu_Program.Printing.Sales
             }
             else if (searchOn == "CUSTOMER")
             {
-                RefreshHeader("SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID WHERE customerName LIKE '%" + tbCari.Text + "%' AND psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC");
+                RefreshHeader(show + " WHERE customerName LIKE '%" + tbCari.Text + "%' AND psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC");
             }
             else
             {
