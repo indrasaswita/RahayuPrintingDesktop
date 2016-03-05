@@ -46,7 +46,7 @@ namespace Rahayu_Program.Master.Customer
                         string address = dt.Rows[0]["address"].ToString();
                         string status = dt.Rows[0]["status"].ToString();
 
-                        tbParentName.Text = companyName;
+                        tbCompanyName.Text = companyName;
                     }
                 }
             }
@@ -54,6 +54,16 @@ namespace Rahayu_Program.Master.Customer
             {
                 main.SetMessage("Tidak ada companyID sekian, ada error!");
             }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            string status = "active";
+            if (rbActive.Checked) status = "active";
+            else if (rbBlock.Checked) status = "block";
+            else if (rbWarning.Checked) status = "warning";
+
+            ExecuteQuery("UPDATE MsCompany SET companyName = '" + tbCompanyName.Text + "', aliases = '" + tbAliases.Text + "', fax = '" + tbFax.Text + "', phone = '" + tbPhone1.Text + "', phone2 = '" + tbPhone2.Text + "', address = '" + tbAddress.Text + "', status = '" + status + "'");
         }
     }
 }
