@@ -100,9 +100,9 @@ namespace Rahayu_Program.Printing.Sales
         public void RefreshHeader(string qTemp)
         {
             DataTable dt = ExecuteQuery(qTemp);
+            gridSalesHeader.Rows.Clear();
             if (dt != null)
             {
-                gridSalesHeader.Rows.Clear();
                 if (dt.Rows.Count > 0)
                 {
                     foreach (DataRow i in dt.Rows)
@@ -142,11 +142,11 @@ namespace Rahayu_Program.Printing.Sales
         private void RefreshDetail(int selectedID)
         {
             DataTable dt = ExecuteQuery("SELECT jobType, printingType, printingTitle, quantity, quantityType, hargaAsli, hargaMaterial, hargaOngkosCetak, status FROM PrintingSalesDetail WHERE printingSalesID = '" + selectedID + "'");
+            gridSalesDetail.Rows.Clear();
             if (dt != null)
             {
                 tbViewSalesID.Text = "No. Nota : " + String.Format("{0:D10}", selectedID);
 
-                gridSalesDetail.Rows.Clear();
                 if (dt.Rows.Count > 0)
                 {
                     totalHargaAsli = 0;
@@ -246,11 +246,11 @@ namespace Rahayu_Program.Printing.Sales
             totalBayarPalsu = 0;
 
             DataTable dt = ExecuteQuery("SELECT paymentID, DATE_FORMAT(paymentTime, '%d/%m/%Y %H:%i:%s') AS paymentTime, ammount, ammount2, description, method FROM PrintingSalesPayment WHERE printingSalesID = '" + selectedID + "' ORDER BY paymentID");
+            gridSalesPayment.Rows.Clear();
             if (dt != null)
             {
                 tbViewSalesID.Text = "No. Nota : " + String.Format("{0:D10}", selectedID);
 
-                gridSalesPayment.Rows.Clear();
                 if (dt.Rows.Count > 0)
                 {
                     foreach (DataRow i in dt.Rows)
@@ -810,9 +810,11 @@ namespace Rahayu_Program.Printing.Sales
             }
         }
 
+        FilterShowSales filter;
+
         private void btnSearchHeader_Click(object sender, EventArgs e)
         {
-            FilterShowSales filter = new FilterShowSales(main, show, interval);
+            if (filter == null) filter = new FilterShowSales(main, show, interval, sortDesc, sortAsc, sebelomTempo, sesudahTempo, sudahLunas, belumLunas, "", "");
             DialogResult result = filter.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {

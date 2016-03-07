@@ -63,7 +63,11 @@ namespace Rahayu_Program.Master.Customer
             else if (rbBlock.Checked) status = "block";
             else if (rbWarning.Checked) status = "warning";
 
-            ExecuteQuery("UPDATE MsCompany SET companyName = '" + tbCompanyName.Text + "', aliases = '" + tbAliases.Text + "', fax = '" + tbFax.Text + "', phone = '" + tbPhone1.Text + "', phone2 = '" + tbPhone2.Text + "', address = '" + tbAddress.Text + "', status = '" + status + "'");
+            ExecuteQuery("UPDATE MsCompany SET companyName = '" + tbCompanyName.Text 
+                            + "', aliases = '" + tbAliases.Text + "', fax = '" 
+                            + tbFax.Text + "', phone = '" + tbPhone1.Text 
+                            + "', phone2 = '" + tbPhone2.Text + "', address = '" 
+                            + tbAddress.Text + "', status = '" + status + "' WHERE companyID = '" + companyID + "'");
         }
     }
 }
