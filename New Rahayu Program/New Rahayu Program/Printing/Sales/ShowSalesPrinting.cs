@@ -20,14 +20,14 @@ namespace Rahayu_Program.Printing.Sales
     public partial class ShowSalesPrinting : Form
     {
         MainForm main;
-        string show = "SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID ";
+        string show = "SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaAsli) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID ";
         string interval = " WHERE psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ";
         string sortDesc = " ORDER BY psh.printingSalesID DESC ";
         string sortAsc = " ORDER BY psh.printingSalesID ASC ";
         string sebelomTempo = " AND tempo < now() ";
         string sesudahTempo = " AND tempo >= now() ";
-        string sudahLunas = " AND IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment psp WHERE psp.printingSalesID = psh.printingSalesID), 0) >= IFNULL((SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail psd WHERE psd.printingSalesID = psh.printingSalesID), 0) ";
-        string belumLunas = " AND IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment psp WHERE psp.printingSalesID = psh.printingSalesID), 0) < IFNULL((SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail psd WHERE psd.printingSalesID = psh.printingSalesID), 0) ";
+        string sudahLunas = " AND IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment psp WHERE psp.printingSalesID = psh.printingSalesID), 0) >= IFNULL((SELECT SUM(hargaAsli) FROM PrintingSalesDetail psd WHERE psd.printingSalesID = psh.printingSalesID), 0) ";
+        string belumLunas = " AND IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment psp WHERE psp.printingSalesID = psh.printingSalesID), 0) < IFNULL((SELECT SUM(hargaAsli) FROM PrintingSalesDetail psd WHERE psd.printingSalesID = psh.printingSalesID), 0) ";
         int customerID;
         string query;
 
@@ -49,9 +49,9 @@ namespace Rahayu_Program.Printing.Sales
             gridSalesHeader.Columns.Add("Customer", "Customer");
             gridSalesHeader.Columns[2].Width = 250;
             gridSalesHeader.Columns.Add("Time", "Time");
-            gridSalesHeader.Columns[3].Width = 190;
+            gridSalesHeader.Columns[3].Width = 60;
             gridSalesHeader.Columns.Add("Status", "Status");
-            gridSalesHeader.Columns[4].Width = 100;
+            gridSalesHeader.Columns[4].Width = 80;
 
             gridSalesDetail.Columns.Add("JobType", "TYP");
             gridSalesDetail.Columns[0].Width = 30;
@@ -112,12 +112,12 @@ namespace Rahayu_Program.Printing.Sales
                         string customerID = i["customerID"].ToString();
                         string company = i["companyName"].ToString();
                         string gabung = (company.Trim() != "") ? company + "; " + customer : customer;
-                        string time = i["salesTime"].ToString();
+                        DateTime time = Other.Parser.TimeFromString(i["salesTime"].ToString());
                         string status = i["status"].ToString();
                         int bayar = Int32.Parse(i["bayar"].ToString());
                         int total = Int32.Parse(i["total"].ToString());
 
-                        gridSalesHeader.Rows.Add(String.Format("{0:D6}", salesID), customerID, gabung, time, status);
+                        gridSalesHeader.Rows.Add(String.Format("{0:D6}", salesID), customerID, gabung, time.ToString("dd/MM HH:mm"), status);
                         if (status == "SALE")
                         {
                             Color colorTemp = bayar == 0 ? Color.Orange : bayar < total ? Color.Yellow : Color.GreenYellow;
@@ -830,44 +830,11 @@ namespace Rahayu_Program.Printing.Sales
             //hutangCustomer.ClearAll();
         }
 
-        string searchOn = "";
-
-        private void btnCompany_Click(object sender, EventArgs e)
+        private void gridSalesPayment_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
-            searchOn = "COMPANY";
-            btnCompany.BackColor = Color.GreenYellow;
-            btnCustomer.BackColor = Color.Red;
-        }
-
-        private void btnCustomer_Click(object sender, EventArgs e)
-        {
-            searchOn = "CUSTOMER";
-            btnCompany.BackColor = Color.Red;
-            btnCustomer.BackColor = Color.GreenYellow;
-        }
-
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            if (searchOn == "COMPANY")
-            {
-                RefreshHeader("SELECT psh.printingSalesID, mcu.customerID, mcu.customerName, mco.companyName, DATE_FORMAT(psh.salesTime, '%d/%m/%Y %H:%i:%s') AS salesTime, psh.status, (SELECT SUM(hargaMaterial + hargaOngkosCetak) FROM PrintingSalesDetail WHERE printingSalesID = psh.printingSalesID) as total, IFNULL((SELECT SUM(ammount) FROM PrintingSalesPayment WHERE printingSalesID = psh.printingSalesID), 0) as bayar FROM PrintingSalesHeader psh JOIN MsCustomer mcu ON psh.customerID = mcu.customerID JOIN MsCompany mco ON mcu.companyID = mco.companyID WHERE companyName LIKE '%" + tbCari.Text + "%' AND psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC");
-            }
-            else if (searchOn == "CUSTOMER")
-            {
-                RefreshHeader(show + " WHERE customerName LIKE '%" + tbCari.Text + "%' AND psh.salesTime > DATE_SUB(now(), INTERVAL 6 MONTH) ORDER BY psh.printingSalesID DESC");
-            }
-            else
-            {
-                main.SetMessage("SELECT FILTER FIRST");
-            }
-        }
-
-        private void tbCari_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnCari_Click(sender, e);
-            }
+            tbTotalBayar.Text = totalBayar.ToString("#,##0");
+            int sisa = totalHargaAsli - totalBayar;
+            tbKurangBayar.Text = sisa.ToString("#,##0");
         }
     }
 }

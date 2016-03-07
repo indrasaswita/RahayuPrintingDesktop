@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowSalesPrinting));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridSalesHeader = new System.Windows.Forms.DataGridView();
             this.gridSalesDetail = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,19 +82,17 @@
             this.rbPPh21 = new System.Windows.Forms.RadioButton();
             this.rbPPh23 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbCari = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnCompany = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnHutangPerCust = new System.Windows.Forms.Button();
             this.btnPenawaranHarga = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.labelasd = new System.Windows.Forms.Label();
+            this.tbTotalBayar = new System.Windows.Forms.TextBox();
+            this.tbKurangBayar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridSalesHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSalesDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSalesPayment)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridSalesHeader
@@ -106,26 +104,28 @@
             this.gridSalesHeader.BackgroundColor = System.Drawing.Color.GreenYellow;
             this.gridSalesHeader.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSalesHeader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSalesHeader.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSalesHeader.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridSalesHeader.GridColor = System.Drawing.Color.Green;
             this.gridSalesHeader.Location = new System.Drawing.Point(12, 86);
             this.gridSalesHeader.MultiSelect = false;
             this.gridSalesHeader.Name = "gridSalesHeader";
             this.gridSalesHeader.ReadOnly = true;
             this.gridSalesHeader.RowHeadersVisible = false;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSalesHeader.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.gridSalesHeader.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridSalesHeader.RowTemplate.Height = 28;
             this.gridSalesHeader.RowTemplate.ReadOnly = true;
             this.gridSalesHeader.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.gridSalesHeader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridSalesHeader.Size = new System.Drawing.Size(630, 714);
+            this.gridSalesHeader.Size = new System.Drawing.Size(480, 714);
             this.gridSalesHeader.TabIndex = 4;
             this.gridSalesHeader.TabStop = false;
             this.gridSalesHeader.SelectionChanged += new System.EventHandler(this.gridSalesHeader_SelectionChanged);
@@ -139,16 +139,16 @@
             this.gridSalesDetail.BackgroundColor = System.Drawing.Color.GreenYellow;
             this.gridSalesDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSalesDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSalesDetail.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSalesDetail.DefaultCellStyle = dataGridViewCellStyle7;
             this.gridSalesDetail.GridColor = System.Drawing.Color.Green;
-            this.gridSalesDetail.Location = new System.Drawing.Point(648, 122);
+            this.gridSalesDetail.Location = new System.Drawing.Point(498, 122);
             this.gridSalesDetail.MultiSelect = false;
             this.gridSalesDetail.Name = "gridSalesDetail";
             this.gridSalesDetail.ReadOnly = true;
@@ -166,7 +166,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(649, 682);
+            this.label1.Location = new System.Drawing.Point(499, 682);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 21);
             this.label1.TabIndex = 32;
@@ -175,7 +175,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(649, 712);
+            this.label2.Location = new System.Drawing.Point(499, 712);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 21);
             this.label2.TabIndex = 34;
@@ -183,14 +183,14 @@
             // 
             // tbTotalHargaAsli
             // 
-            this.tbTotalHargaAsli.Location = new System.Drawing.Point(863, 679);
+            this.tbTotalHargaAsli.Location = new System.Drawing.Point(713, 679);
             this.tbTotalHargaAsli.Name = "tbTotalHargaAsli";
             this.tbTotalHargaAsli.Size = new System.Drawing.Size(193, 29);
             this.tbTotalHargaAsli.TabIndex = 33;
             // 
             // tbTotalHargaMaterial
             // 
-            this.tbTotalHargaMaterial.Location = new System.Drawing.Point(863, 709);
+            this.tbTotalHargaMaterial.Location = new System.Drawing.Point(713, 709);
             this.tbTotalHargaMaterial.Name = "tbTotalHargaMaterial";
             this.tbTotalHargaMaterial.Size = new System.Drawing.Size(193, 29);
             this.tbTotalHargaMaterial.TabIndex = 35;
@@ -198,7 +198,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(649, 742);
+            this.label3.Location = new System.Drawing.Point(499, 742);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 21);
             this.label3.TabIndex = 36;
@@ -206,7 +206,7 @@
             // 
             // tbTotalHargaOngkosCetak
             // 
-            this.tbTotalHargaOngkosCetak.Location = new System.Drawing.Point(863, 739);
+            this.tbTotalHargaOngkosCetak.Location = new System.Drawing.Point(713, 739);
             this.tbTotalHargaOngkosCetak.Name = "tbTotalHargaOngkosCetak";
             this.tbTotalHargaOngkosCetak.Size = new System.Drawing.Size(193, 29);
             this.tbTotalHargaOngkosCetak.TabIndex = 37;
@@ -214,7 +214,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(649, 772);
+            this.label4.Location = new System.Drawing.Point(499, 772);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 21);
             this.label4.TabIndex = 38;
@@ -222,7 +222,7 @@
             // 
             // tbTotalHargaNota
             // 
-            this.tbTotalHargaNota.Location = new System.Drawing.Point(863, 769);
+            this.tbTotalHargaNota.Location = new System.Drawing.Point(713, 769);
             this.tbTotalHargaNota.Name = "tbTotalHargaNota";
             this.tbTotalHargaNota.Size = new System.Drawing.Size(193, 29);
             this.tbTotalHargaNota.TabIndex = 39;
@@ -231,7 +231,7 @@
             // 
             this.btnDeleteTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeleteTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(651, 341);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(501, 341);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Size = new System.Drawing.Size(100, 55);
             this.btnDeleteTransaction.TabIndex = 8;
@@ -244,7 +244,7 @@
             // 
             this.btnShowTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnShowTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowTransaction.Location = new System.Drawing.Point(757, 341);
+            this.btnShowTransaction.Location = new System.Drawing.Point(607, 341);
             this.btnShowTransaction.Name = "btnShowTransaction";
             this.btnShowTransaction.Size = new System.Drawing.Size(100, 55);
             this.btnShowTransaction.TabIndex = 9;
@@ -256,7 +256,7 @@
             // 
             this.btnSudahCetak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSudahCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSudahCetak.Location = new System.Drawing.Point(757, 488);
+            this.btnSudahCetak.Location = new System.Drawing.Point(607, 488);
             this.btnSudahCetak.Name = "btnSudahCetak";
             this.btnSudahCetak.Size = new System.Drawing.Size(100, 55);
             this.btnSudahCetak.TabIndex = 22;
@@ -267,7 +267,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(651, 461);
+            this.label5.Location = new System.Drawing.Point(501, 461);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(348, 21);
             this.label5.TabIndex = 20;
@@ -277,7 +277,7 @@
             // 
             this.btnSudahFinishing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSudahFinishing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSudahFinishing.Location = new System.Drawing.Point(863, 488);
+            this.btnSudahFinishing.Location = new System.Drawing.Point(713, 488);
             this.btnSudahFinishing.Name = "btnSudahFinishing";
             this.btnSudahFinishing.Size = new System.Drawing.Size(100, 55);
             this.btnSudahFinishing.TabIndex = 23;
@@ -289,7 +289,7 @@
             // 
             this.btnSudahPacking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSudahPacking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSudahPacking.Location = new System.Drawing.Point(969, 488);
+            this.btnSudahPacking.Location = new System.Drawing.Point(819, 488);
             this.btnSudahPacking.Name = "btnSudahPacking";
             this.btnSudahPacking.Size = new System.Drawing.Size(100, 55);
             this.btnSudahPacking.TabIndex = 24;
@@ -301,7 +301,7 @@
             // 
             this.btnSudahSelesai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSudahSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSudahSelesai.Location = new System.Drawing.Point(1075, 488);
+            this.btnSudahSelesai.Location = new System.Drawing.Point(925, 488);
             this.btnSudahSelesai.Name = "btnSudahSelesai";
             this.btnSudahSelesai.Size = new System.Drawing.Size(100, 55);
             this.btnSudahSelesai.TabIndex = 25;
@@ -313,7 +313,7 @@
             // 
             this.btnCreateTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCreateTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateTransaction.Location = new System.Drawing.Point(863, 341);
+            this.btnCreateTransaction.Location = new System.Drawing.Point(713, 341);
             this.btnCreateTransaction.Name = "btnCreateTransaction";
             this.btnCreateTransaction.Size = new System.Drawing.Size(100, 55);
             this.btnCreateTransaction.TabIndex = 10;
@@ -330,16 +330,16 @@
             this.gridSalesPayment.BackgroundColor = System.Drawing.Color.GreenYellow;
             this.gridSalesPayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridSalesPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridSalesPayment.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridSalesPayment.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridSalesPayment.GridColor = System.Drawing.Color.Green;
-            this.gridSalesPayment.Location = new System.Drawing.Point(648, 549);
+            this.gridSalesPayment.Location = new System.Drawing.Point(498, 549);
             this.gridSalesPayment.MultiSelect = false;
             this.gridSalesPayment.Name = "gridSalesPayment";
             this.gridSalesPayment.ReadOnly = true;
@@ -352,12 +352,13 @@
             this.gridSalesPayment.Size = new System.Drawing.Size(570, 103);
             this.gridSalesPayment.TabIndex = 26;
             this.gridSalesPayment.TabStop = false;
+            this.gridSalesPayment.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.gridSalesPayment_RowStateChanged);
             // 
             // btnFileSiap
             // 
             this.btnFileSiap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFileSiap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFileSiap.Location = new System.Drawing.Point(651, 488);
+            this.btnFileSiap.Location = new System.Drawing.Point(501, 488);
             this.btnFileSiap.Name = "btnFileSiap";
             this.btnFileSiap.Size = new System.Drawing.Size(100, 55);
             this.btnFileSiap.TabIndex = 21;
@@ -370,7 +371,7 @@
             this.tbStatusBayar.BackColor = System.Drawing.Color.Green;
             this.tbStatusBayar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbStatusBayar.ForeColor = System.Drawing.Color.White;
-            this.tbStatusBayar.Location = new System.Drawing.Point(668, 652);
+            this.tbStatusBayar.Location = new System.Drawing.Point(518, 652);
             this.tbStatusBayar.Name = "tbStatusBayar";
             this.tbStatusBayar.Size = new System.Drawing.Size(550, 22);
             this.tbStatusBayar.TabIndex = 28;
@@ -381,7 +382,7 @@
             // 
             this.btnHapusBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHapusBayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHapusBayar.Location = new System.Drawing.Point(1224, 550);
+            this.btnHapusBayar.Location = new System.Drawing.Point(1074, 550);
             this.btnHapusBayar.Name = "btnHapusBayar";
             this.btnHapusBayar.Size = new System.Drawing.Size(234, 37);
             this.btnHapusBayar.TabIndex = 29;
@@ -393,7 +394,7 @@
             // 
             this.btnUbahBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUbahBayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUbahBayar.Location = new System.Drawing.Point(1224, 593);
+            this.btnUbahBayar.Location = new System.Drawing.Point(1074, 593);
             this.btnUbahBayar.Name = "btnUbahBayar";
             this.btnUbahBayar.Size = new System.Drawing.Size(234, 37);
             this.btnUbahBayar.TabIndex = 30;
@@ -405,7 +406,7 @@
             // 
             this.btnBuatBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuatBayar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuatBayar.Location = new System.Drawing.Point(1224, 636);
+            this.btnBuatBayar.Location = new System.Drawing.Point(1074, 636);
             this.btnBuatBayar.Name = "btnBuatBayar";
             this.btnBuatBayar.Size = new System.Drawing.Size(234, 37);
             this.btnBuatBayar.TabIndex = 31;
@@ -427,7 +428,7 @@
             // 
             this.btnRefreshHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRefreshHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefreshHeader.Location = new System.Drawing.Point(561, 47);
+            this.btnRefreshHeader.Location = new System.Drawing.Point(395, 49);
             this.btnRefreshHeader.Name = "btnRefreshHeader";
             this.btnRefreshHeader.Size = new System.Drawing.Size(81, 31);
             this.btnRefreshHeader.TabIndex = 3;
@@ -439,7 +440,7 @@
             // 
             this.btnSearchHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearchHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchHeader.Location = new System.Drawing.Point(561, 10);
+            this.btnSearchHeader.Location = new System.Drawing.Point(395, 12);
             this.btnSearchHeader.Name = "btnSearchHeader";
             this.btnSearchHeader.Size = new System.Drawing.Size(81, 31);
             this.btnSearchHeader.TabIndex = 2;
@@ -462,7 +463,7 @@
             this.tbViewSalesID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbViewSalesID.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.tbViewSalesID.ForeColor = System.Drawing.Color.White;
-            this.tbViewSalesID.Location = new System.Drawing.Point(648, 86);
+            this.tbViewSalesID.Location = new System.Drawing.Point(498, 86);
             this.tbViewSalesID.Name = "tbViewSalesID";
             this.tbViewSalesID.Size = new System.Drawing.Size(810, 36);
             this.tbViewSalesID.TabIndex = 5;
@@ -539,7 +540,7 @@
             // 
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(1332, 761);
+            this.btnClose.Location = new System.Drawing.Point(1182, 761);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(126, 39);
             this.btnClose.TabIndex = 40;
@@ -549,7 +550,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.tbViewHargaAsli);
             this.panel1.Controls.Add(this.tbViewHargaMaterial);
             this.panel1.Controls.Add(this.label11);
@@ -558,7 +559,8 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.tbViewHargaOngkosCetak);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(648, 274);
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(498, 274);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(810, 64);
             this.panel1.TabIndex = 7;
@@ -589,7 +591,7 @@
             // 
             this.btnPrintInvoice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintInvoice.Location = new System.Drawing.Point(1186, 341);
+            this.btnPrintInvoice.Location = new System.Drawing.Point(1036, 341);
             this.btnPrintInvoice.Name = "btnPrintInvoice";
             this.btnPrintInvoice.Size = new System.Drawing.Size(100, 55);
             this.btnPrintInvoice.TabIndex = 13;
@@ -600,7 +602,7 @@
             // pnlStatusBayar
             // 
             this.pnlStatusBayar.BackColor = System.Drawing.Color.Green;
-            this.pnlStatusBayar.Location = new System.Drawing.Point(648, 652);
+            this.pnlStatusBayar.Location = new System.Drawing.Point(498, 652);
             this.pnlStatusBayar.Name = "pnlStatusBayar";
             this.pnlStatusBayar.Size = new System.Drawing.Size(22, 22);
             this.pnlStatusBayar.TabIndex = 27;
@@ -609,7 +611,7 @@
             // 
             this.btnPrintWO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPrintWO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintWO.Location = new System.Drawing.Point(863, 402);
+            this.btnPrintWO.Location = new System.Drawing.Point(713, 402);
             this.btnPrintWO.Name = "btnPrintWO";
             this.btnPrintWO.Size = new System.Drawing.Size(100, 55);
             this.btnPrintWO.TabIndex = 17;
@@ -621,7 +623,7 @@
             // 
             this.btnSuratJalan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSuratJalan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuratJalan.Location = new System.Drawing.Point(969, 341);
+            this.btnSuratJalan.Location = new System.Drawing.Point(819, 341);
             this.btnSuratJalan.Name = "btnSuratJalan";
             this.btnSuratJalan.Size = new System.Drawing.Size(105, 55);
             this.btnSuratJalan.TabIndex = 11;
@@ -633,7 +635,7 @@
             // 
             this.btnPrintInvoiceKecil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPrintInvoiceKecil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintInvoiceKecil.Location = new System.Drawing.Point(1186, 402);
+            this.btnPrintInvoiceKecil.Location = new System.Drawing.Point(1036, 402);
             this.btnPrintInvoiceKecil.Name = "btnPrintInvoiceKecil";
             this.btnPrintInvoiceKecil.Size = new System.Drawing.Size(100, 55);
             this.btnPrintInvoiceKecil.TabIndex = 19;
@@ -645,7 +647,7 @@
             // 
             this.btnTukerFaktur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTukerFaktur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTukerFaktur.Location = new System.Drawing.Point(1080, 341);
+            this.btnTukerFaktur.Location = new System.Drawing.Point(930, 341);
             this.btnTukerFaktur.Name = "btnTukerFaktur";
             this.btnTukerFaktur.Size = new System.Drawing.Size(100, 55);
             this.btnTukerFaktur.TabIndex = 12;
@@ -657,7 +659,7 @@
             // 
             this.btnOFFER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOFFER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOFFER.Location = new System.Drawing.Point(757, 402);
+            this.btnOFFER.Location = new System.Drawing.Point(607, 402);
             this.btnOFFER.Name = "btnOFFER";
             this.btnOFFER.Size = new System.Drawing.Size(100, 55);
             this.btnOFFER.TabIndex = 16;
@@ -669,7 +671,7 @@
             // 
             this.btnSALE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSALE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSALE.Location = new System.Drawing.Point(651, 402);
+            this.btnSALE.Location = new System.Drawing.Point(501, 402);
             this.btnSALE.Name = "btnSALE";
             this.btnSALE.Size = new System.Drawing.Size(100, 55);
             this.btnSALE.TabIndex = 15;
@@ -701,78 +703,19 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
             this.panel2.Controls.Add(this.rbPPh21);
             this.panel2.Controls.Add(this.rbPPh23);
-            this.panel2.Location = new System.Drawing.Point(1289, 341);
+            this.panel2.Location = new System.Drawing.Point(1139, 341);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(88, 55);
             this.panel2.TabIndex = 14;
-            // 
-            // tbCari
-            // 
-            this.tbCari.Location = new System.Drawing.Point(3, 35);
-            this.tbCari.Name = "tbCari";
-            this.tbCari.Size = new System.Drawing.Size(167, 29);
-            this.tbCari.TabIndex = 41;
-            this.tbCari.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbCari_KeyDown);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Red;
-            this.panel3.Controls.Add(this.btnCompany);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.btnCustomer);
-            this.panel3.Controls.Add(this.tbCari);
-            this.panel3.Location = new System.Drawing.Point(355, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 68);
-            this.panel3.TabIndex = 42;
-            this.panel3.Visible = false;
-            // 
-            // btnCompany
-            // 
-            this.btnCompany.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompany.Location = new System.Drawing.Point(100, 4);
-            this.btnCompany.Name = "btnCompany";
-            this.btnCompany.Size = new System.Drawing.Size(97, 31);
-            this.btnCompany.TabIndex = 44;
-            this.btnCompany.Text = "Company";
-            this.btnCompany.UseVisualStyleBackColor = true;
-            this.btnCompany.Click += new System.EventHandler(this.btnCompany_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Location = new System.Drawing.Point(3, 4);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(98, 31);
-            this.btnCustomer.TabIndex = 44;
-            this.btnCustomer.Text = "Customer";
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(169, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 28);
-            this.button1.TabIndex = 43;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // btnHutangPerCust
             // 
             this.btnHutangPerCust.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHutangPerCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHutangPerCust.Location = new System.Drawing.Point(1080, 402);
+            this.btnHutangPerCust.Location = new System.Drawing.Point(930, 402);
             this.btnHutangPerCust.Name = "btnHutangPerCust";
             this.btnHutangPerCust.Size = new System.Drawing.Size(100, 55);
             this.btnHutangPerCust.TabIndex = 44;
@@ -784,7 +727,7 @@
             // 
             this.btnPenawaranHarga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPenawaranHarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPenawaranHarga.Location = new System.Drawing.Point(969, 402);
+            this.btnPenawaranHarga.Location = new System.Drawing.Point(819, 402);
             this.btnPenawaranHarga.Name = "btnPenawaranHarga";
             this.btnPenawaranHarga.Size = new System.Drawing.Size(105, 55);
             this.btnPenawaranHarga.TabIndex = 18;
@@ -792,14 +735,46 @@
             this.btnPenawaranHarga.UseVisualStyleBackColor = true;
             this.btnPenawaranHarga.Click += new System.EventHandler(this.btnPenawaran_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(929, 682);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 21);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Total BAYAR";
+            // 
+            // labelasd
+            // 
+            this.labelasd.AutoSize = true;
+            this.labelasd.Location = new System.Drawing.Point(929, 721);
+            this.labelasd.Name = "labelasd";
+            this.labelasd.Size = new System.Drawing.Size(133, 21);
+            this.labelasd.TabIndex = 34;
+            this.labelasd.Text = "KURANG BAYAR";
+            // 
+            // tbTotalBayar
+            // 
+            this.tbTotalBayar.Location = new System.Drawing.Point(1074, 679);
+            this.tbTotalBayar.Name = "tbTotalBayar";
+            this.tbTotalBayar.Size = new System.Drawing.Size(193, 29);
+            this.tbTotalBayar.TabIndex = 33;
+            // 
+            // tbKurangBayar
+            // 
+            this.tbKurangBayar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.tbKurangBayar.Location = new System.Drawing.Point(1074, 709);
+            this.tbKurangBayar.Name = "tbKurangBayar";
+            this.tbKurangBayar.Size = new System.Drawing.Size(193, 39);
+            this.tbKurangBayar.TabIndex = 35;
+            // 
             // ShowSalesPrinting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.ClientSize = new System.Drawing.Size(1470, 812);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.ClientSize = new System.Drawing.Size(1320, 812);
             this.Controls.Add(this.btnHutangPerCust);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnPenawaranHarga);
             this.Controls.Add(this.btnOFFER);
             this.Controls.Add(this.btnSALE);
@@ -831,9 +806,13 @@
             this.Controls.Add(this.tbTotalHargaNota);
             this.Controls.Add(this.tbTotalHargaOngkosCetak);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.tbKurangBayar);
             this.Controls.Add(this.tbTotalHargaMaterial);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.tbTotalBayar);
             this.Controls.Add(this.tbTotalHargaAsli);
+            this.Controls.Add(this.labelasd);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridSalesPayment);
@@ -856,8 +835,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -915,12 +892,11 @@
         private System.Windows.Forms.RadioButton rbPPh21;
         private System.Windows.Forms.RadioButton rbPPh23;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox tbCari;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnCompany;
-        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnHutangPerCust;
         private System.Windows.Forms.Button btnPenawaranHarga;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelasd;
+        private System.Windows.Forms.TextBox tbTotalBayar;
+        private System.Windows.Forms.TextBox tbKurangBayar;
     }
 }
