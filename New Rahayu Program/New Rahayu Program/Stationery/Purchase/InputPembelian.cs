@@ -104,7 +104,7 @@ namespace Rahayu_Program.Stationery.Purchase
                 listBeli.RemoveAt(indexDobel);
             }
 
-            DetailPembelian temp = new DetailPembelian(this, barangID, namaBarang, qty, hargaBeli);
+            DetailPembelian temp = new DetailPembelian(this, barangID, namaBarang, qty, hargaBeli, tbKode.Text.Trim());
             listBeli.Add(temp);
             RefreshListBeli();
         }
@@ -190,7 +190,7 @@ namespace Rahayu_Program.Stationery.Purchase
         {
             if (listBeli.Count > 0)
             {
-                ExecuteQuery("INSERT INTO StationeryPurchaseHeader(purchaseTime) VALUES (now())");
+                ExecuteQuery("INSERT INTO StationeryPurchaseHeader(purchaseTime, status) VALUES (now(), 'pending')");
                 DataTable dt = ExecuteQuery("SELECT stationeryPurchaseID FROM StationeryPurchaseHeader ORDER BY stationeryPurchaseID DESC LIMIT 0, 1");
                 if (dt.Rows.Count == 1)
                 {

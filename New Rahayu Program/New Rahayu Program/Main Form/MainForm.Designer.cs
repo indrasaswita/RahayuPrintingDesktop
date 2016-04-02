@@ -906,6 +906,7 @@
             this.lihatDataPembelianTerakhirToolStripMenuItem.Name = "lihatDataPembelianTerakhirToolStripMenuItem";
             this.lihatDataPembelianTerakhirToolStripMenuItem.Size = new System.Drawing.Size(284, 24);
             this.lihatDataPembelianTerakhirToolStripMenuItem.Text = "Lihat Data Pembelian Terakhir";
+            this.lihatDataPembelianTerakhirToolStripMenuItem.Click += new System.EventHandler(this.lihatDataPembelianTerakhirToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem3
             // 

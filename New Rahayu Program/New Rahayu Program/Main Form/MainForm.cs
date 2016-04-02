@@ -1013,5 +1013,24 @@ namespace Rahayu_Program
             Master.Employee.ChangePassword chpass = new Master.Employee.ChangePassword(this);
             chpass.ShowDialog();
         }
+
+        public Rahayu_Program.Stationery.Purchase.ViewAllPembelianByPurchaseID viewPurchase;
+
+        private void lihatDataPembelianTerakhirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openViewPurchaseStationery();
+        }
+
+        public void openViewPurchaseStationery()
+        {
+            if (viewPurchase == null) viewPurchase = new Stationery.Purchase.ViewAllPembelianByPurchaseID(this);
+            viewPurchase.Show();
+            viewPurchase.BringToFront();
+        }
+
+        public void closeViewPurchaseStationery()
+        {
+            viewPurchase = null;
+        }
     }
 }

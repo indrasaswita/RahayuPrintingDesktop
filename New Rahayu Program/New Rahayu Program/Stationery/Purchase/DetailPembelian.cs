@@ -14,17 +14,18 @@ namespace Rahayu_Program.Stationery.Purchase
         private InputPembelian parent;
         private int index;
 
-        private string barangID, namaBarang;
+        private string barangID, namaBarang, kode;
         private int qty, hargaBeli;
         private int totalHarga;
 
-        public DetailPembelian(InputPembelian parent, string barangID, string namaBarang, int qty, int hargaBeli)
+        public DetailPembelian(InputPembelian parent, string barangID, string namaBarang, int qty, int hargaBeli, string kode)
         {
             this.parent = parent;
             this.barangID = barangID;
             this.namaBarang = namaBarang;
             this.qty = qty;
             this.hargaBeli = hargaBeli;
+            this.kode = kode;
             totalHarga = qty * hargaBeli;
 
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace Rahayu_Program.Stationery.Purchase
         {
             tb_namaBarang.Text = namaBarang;
             tbQty.Text = qty.ToString("#,##0");
-            tbHarga.Text = hargaBeli.ToString("#,##0");
+            tbHarga.Text = kode;//hargaBeli.ToString("#,##0");
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -30,9 +30,9 @@
         {
             this.tb_namaBarang = new System.Windows.Forms.TextBox();
             this.tbQty = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbHarga = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_namaBarang
@@ -59,26 +59,16 @@
             this.tbQty.Text = "999,999";
             this.tbQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "x Rp";
-            // 
             // tbHarga
             // 
             this.tbHarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tbHarga.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbHarga.Location = new System.Drawing.Point(114, 26);
+            this.tbHarga.Location = new System.Drawing.Point(147, 26);
             this.tbHarga.Name = "tbHarga";
             this.tbHarga.ReadOnly = true;
-            this.tbHarga.Size = new System.Drawing.Size(77, 22);
+            this.tbHarga.Size = new System.Drawing.Size(45, 22);
             this.tbHarga.TabIndex = 1;
-            this.tbHarga.Text = "9,999,999";
-            this.tbHarga.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbHarga.Text = "3";
             // 
             // button1
             // 
@@ -91,13 +81,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(87, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "KODE :";
+            // 
             // DetailPembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbHarga);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbQty);
             this.Controls.Add(this.tb_namaBarang);
             this.Controls.Add(this.label1);
@@ -115,9 +114,9 @@
 
         private System.Windows.Forms.TextBox tb_namaBarang;
         private System.Windows.Forms.TextBox tbQty;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbHarga;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
 
     }
 }

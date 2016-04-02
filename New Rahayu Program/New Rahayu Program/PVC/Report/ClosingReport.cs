@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Rahayu_Program.Report;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace Rahayu_Program.PVC.Report
 {
@@ -92,7 +94,7 @@ namespace Rahayu_Program.PVC.Report
 
     "UNION " +
 
-    "SELECT psh.pvcSalesID, psh.salesTime, mc.customerName, psp.paymentTime, -1 as pvcPerPack, psp.paymentMethod, -1, psp.ammount, -(1 * psp.ammount) AS subtotal, (SELECT SUM(quantity * sellPrice) FROM PVCSalesDetail WHERE psh.pvcSalesID = pvcSalesID) AS grandtotal, (SELECT SUM(1 * ammount) FROM PVCSalesPayment WHERE psp.pvcSalesID = pvcSalesID) AS grandtotalBayar FROM PVCSalesHeader psh, PVCSalesDetail psd, PVCSalesPayment psp, MsCustomer mc, MsPVC mp WHERE psh.pvcSalesID = psd.pvcSalesID AND psd.pvcID = mp.pvcID AND psh.customerID = mc.customerID AND psh.pvcSalesID = psp.pvcSalesID AND ((psh.salesTime > '" + awal.ToString("yyyy-MM-dd HH:mm:ss") + "' AND psh.salesTime < '" + akhir.ToString("yyyy-MM-dd HH:mm:ss") + "') OR psh.pvcSalesID IN (SELECT DISTINCT pvcSalesID FROM PVCSalesPayment WHERE paymentTime > '" + awal.ToString("yyyy-MM-dd HH:mm:ss") + "' AND paymentTime < '" + akhir.ToString("yyyy-MM-dd HH:mm:ss") + "'))");
+    "SELECT psh.pvcSalesID, psh.salesTime, mc.customerName, psp.paymentTime, -1 as pvcPerPack, psp.paymentMethod, -1, psp.ammount, -(1 * psp.ammount) AS subtotal, (SELECT SUM(quantity * sellPrice) FROM PVCSalesDetail WHERE psh.pvcSalesID = pvcSalesID) AS grandtotal, (SELECT SUM(1 * ammount) FROM PVCSalesPayment WHERE psp.pvcSalesID = pvcSalesID) AS grandtotalBayar FROM PVCSalesHeader psh, PVCSalesDetail psd, PVCSalesPayment psp, MsCustomer mc, MsPVC mp WHERE psh.pvcSalesID = psd.pvcSalesID AND psd.pvcID = mp.pvcID AND psh.customerID = mc.customerID AND psh.pvcSalesID = psp.pvcSalesID AND psh.pvcSalesID IN (SELECT DISTINCT pvcSalesID FROM PVCSalesPayment WHERE paymentTime > '" + awal.ToString("yyyy-MM-dd HH:mm:ss") + "' AND paymentTime < '" + akhir.ToString("yyyy-MM-dd HH:mm:ss") + "')");
 
                 if (dt == null)
                 {
@@ -123,6 +125,28 @@ namespace Rahayu_Program.PVC.Report
             reportForm.MdiParent = main;
             reportForm.WindowState = FormWindowState.Maximized;
             
+            reportForm.GetCrystalReportViewer().ReportSource = laporan;
+            reportForm.GetCrystalReportViewer().Refresh();
+            reportForm.Show();
+        }
+
+        private void buatLaporanByQueryStock(object laporan, Boolean blank)
+        {
+            ReportForm reportForm = new ReportForm(main);
+            reportForm.MdiParent = main;
+            reportForm.WindowState = FormWindowState.Maximized;
+
+            reportForm.GetCrystalReportViewer().ReportSource = laporan;
+
+            ParameterField field1 = new ParameterField();
+            ParameterDiscreteValue value1 = new ParameterDiscreteValue();
+            field1.Name = "blank";
+            value1.Value = blank;
+            field1.CurrentValues.Add(value1);
+
+            ParameterFields fields = new ParameterFields();
+            fields.Add(field1);
+
             reportForm.GetCrystalReportViewer().ReportSource = laporan;
             reportForm.GetCrystalReportViewer().Refresh();
             reportForm.Show();
@@ -229,7 +253,7 @@ namespace Rahayu_Program.PVC.Report
                     laporan.SetDataSource(dt);
                     laporan.SummaryInfo.ReportTitle = "PVC Laporan Stock Manual";
 
-                    buatLaporanByQuery(laporan);
+                    buatLaporanByQueryStock(laporan, true); // soalnya blanknya nutupin stock
                 }
                 else
                 {
@@ -294,6 +318,32 @@ namespace Rahayu_Program.PVC.Report
                     {
                         MessageBox.Show("DATA TIDAK ADA (LAPORAN PINDAH BARANG DI CLOSING FORM PVC)");
                     }
+                }
+            }
+        }
+
+        private void btnOpnameAkhir_Click(object sender, EventArgs e)
+        {
+            DataTable dt = main.ExecuteQuery("SELECT pvcTypeName, mp.pvcID, pvcName, pvcPerPack, pvcTypeUnit, sellPrice, homeStock, rahayuStock FROM MsPVC mp JOIN MsPVCType mpt ON mp.pvcTypeID = mpt.pvcTypeID");
+
+            if (dt == null)
+            {
+                MessageBox.Show("ERROR PRINT REPORT (LAPORAN HARIAN DI CLOSING FORM PVC)");
+                this.Dispose();
+            }
+            else
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    Rahayu_Program.Report.PVC.LaporanStockManual laporan = new Rahayu_Program.Report.PVC.LaporanStockManual();
+                    laporan.SetDataSource(dt);
+                    laporan.SummaryInfo.ReportTitle = "PVC Laporan Stock Manual";
+
+                    buatLaporanByQueryStock(laporan, false); //false soalnya ga mau di tutupin
+                }
+                else
+                {
+                    MessageBox.Show("DATA TIDAK ADA (LAPORAN HARIAN DI CLOSING FORM PVC)");
                 }
             }
         }

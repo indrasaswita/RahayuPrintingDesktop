@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHarian = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnPrintStock = new System.Windows.Forms.Button();
             this.btnTransfer = new System.Windows.Forms.Button();
+            this.btnOpnameAkhir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,14 +142,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 14);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
@@ -200,20 +201,31 @@
             this.btnPrintStock.Name = "btnPrintStock";
             this.btnPrintStock.Size = new System.Drawing.Size(223, 37);
             this.btnPrintStock.TabIndex = 0;
-            this.btnPrintStock.Text = "PRINT STOCK";
+            this.btnPrintStock.Text = "PRINT STOCK AWAL";
             this.btnPrintStock.UseVisualStyleBackColor = true;
             this.btnPrintStock.Click += new System.EventHandler(this.btnPrintStock_Click);
             // 
             // btnTransfer
             // 
             this.btnTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransfer.Location = new System.Drawing.Point(244, 409);
+            this.btnTransfer.Location = new System.Drawing.Point(244, 366);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.Size = new System.Drawing.Size(223, 37);
             this.btnTransfer.TabIndex = 18;
             this.btnTransfer.Text = "TRANSFER STOCK";
             this.btnTransfer.UseVisualStyleBackColor = true;
             this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
+            // 
+            // btnOpnameAkhir
+            // 
+            this.btnOpnameAkhir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpnameAkhir.Location = new System.Drawing.Point(244, 409);
+            this.btnOpnameAkhir.Name = "btnOpnameAkhir";
+            this.btnOpnameAkhir.Size = new System.Drawing.Size(223, 37);
+            this.btnOpnameAkhir.TabIndex = 0;
+            this.btnOpnameAkhir.Text = "PRINT STOCK AKHIR";
+            this.btnOpnameAkhir.UseVisualStyleBackColor = true;
+            this.btnOpnameAkhir.Click += new System.EventHandler(this.btnOpnameAkhir_Click);
             // 
             // ClosingReport
             // 
@@ -232,6 +244,7 @@
             this.Controls.Add(this.tbAwal);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOpnameAkhir);
             this.Controls.Add(this.btnPrintStock);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHarianGroup);
@@ -266,5 +279,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPrintStock;
         private System.Windows.Forms.Button btnTransfer;
+        private System.Windows.Forms.Button btnOpnameAkhir;
     }
 }
