@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rahayu_Program.Report.Stationery {
+namespace Rahayu_Program.Report.PVC {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace Rahayu_Program.Report.Stationery {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class LaporanBedaStock : ReportClass {
+    public class LaporanBedaPVCStock : ReportClass {
         
-        public LaporanBedaStock() {
+        public LaporanBedaPVCStock() {
         }
         
         public override string ResourceName {
             get {
-                return "LaporanBedaStock.rpt";
+                return "LaporanBedaPVCStock.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Rahayu_Program.Report.Stationery {
         
         public override string FullResourceName {
             get {
-                return "Rahayu_Program.Report.Stationery.LaporanBedaStock.rpt";
+                return "Rahayu_Program.Report.PVC.LaporanBedaPVCStock.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace Rahayu_Program.Report.Stationery {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedLaporanBedaStock : Component, ICachedReport {
+    public class CachedLaporanBedaPVCStock : Component, ICachedReport {
         
-        public CachedLaporanBedaStock() {
+        public CachedLaporanBedaPVCStock() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace Rahayu_Program.Report.Stationery {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            LaporanBedaStock rpt = new LaporanBedaStock();
+            LaporanBedaPVCStock rpt = new LaporanBedaPVCStock();
             rpt.Site = this.Site;
             return rpt;
         }

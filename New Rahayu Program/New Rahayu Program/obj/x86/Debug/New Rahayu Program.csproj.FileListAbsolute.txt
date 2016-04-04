@@ -607,3 +607,6 @@ D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x
 D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.SettingTimer.resources
 D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.Timer.TimerItem.resources
 D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\New Rahayu Program.csproj.GenerateResource.Cache
+D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Sales.PVCCashStamp.resources
+D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Report.OpnameList.resources
+D:\PROGRAM\GIT\RahayuPrintingDesktop\New Rahayu Program\New Rahayu Program\obj\x86\Debug\Rahayu_Program.PVC.Report.PVCOpnameReport.resources

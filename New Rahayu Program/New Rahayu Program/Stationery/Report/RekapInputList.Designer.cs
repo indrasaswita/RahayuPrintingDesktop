@@ -47,7 +47,7 @@
             this.tbNomorBarang.Name = "tbNomorBarang";
             this.tbNomorBarang.ReadOnly = true;
             this.tbNomorBarang.Size = new System.Drawing.Size(161, 29);
-            this.tbNomorBarang.TabIndex = 6;
+            this.tbNomorBarang.TabIndex = 1;
             this.tbNomorBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbNamaBarang
@@ -59,7 +59,7 @@
             this.tbNamaBarang.Name = "tbNamaBarang";
             this.tbNamaBarang.ReadOnly = true;
             this.tbNamaBarang.Size = new System.Drawing.Size(267, 22);
-            this.tbNamaBarang.TabIndex = 5;
+            this.tbNamaBarang.TabIndex = 0;
             this.tbNamaBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // nudQty
@@ -78,7 +78,7 @@
             -2147483648});
             this.nudQty.Name = "nudQty";
             this.nudQty.Size = new System.Drawing.Size(97, 36);
-            this.nudQty.TabIndex = 10;
+            this.nudQty.TabIndex = 5;
             this.nudQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudQty.ThousandsSeparator = true;
             this.nudQty.Value = new decimal(new int[] {
@@ -95,7 +95,7 @@
             this.label1.Location = new System.Drawing.Point(282, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 21);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Qty:";
             // 
             // btnNext
@@ -104,7 +104,7 @@
             this.btnNext.Location = new System.Drawing.Point(382, 28);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(64, 30);
-            this.btnNext.TabIndex = 12;
+            this.btnNext.TabIndex = 6;
             this.btnNext.Text = "NEXT";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -114,7 +114,7 @@
             this.btnBarcode.Location = new System.Drawing.Point(168, 30);
             this.btnBarcode.Name = "btnBarcode";
             this.btnBarcode.Size = new System.Drawing.Size(100, 29);
-            this.btnBarcode.TabIndex = 13;
+            this.btnBarcode.TabIndex = 2;
             this.btnBarcode.Text = "Barcode!";
             this.btnBarcode.UseVisualStyleBackColor = true;
             // 
@@ -124,7 +124,7 @@
             this.panel1.Location = new System.Drawing.Point(275, -4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 71);
-            this.panel1.TabIndex = 14;
+            this.panel1.TabIndex = 4;
             // 
             // RekapInputList
             // 

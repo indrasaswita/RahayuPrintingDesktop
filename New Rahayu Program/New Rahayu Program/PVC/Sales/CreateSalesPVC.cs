@@ -672,5 +672,11 @@ namespace Rahayu_Program.PVC.Sales
         {
             
         }
+
+        private void cashStampToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PVCCashStamp stC = new PVCCashStamp(main);
+            stC.ShowDialog();
+        }
     }
 }

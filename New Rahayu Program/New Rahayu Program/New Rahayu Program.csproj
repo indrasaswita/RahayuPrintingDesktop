@@ -306,11 +306,29 @@
     <Compile Include="Master\PVC\SearchPVC.Designer.cs">
       <DependentUpon>SearchPVC.cs</DependentUpon>
     </Compile>
+    <Compile Include="PVC\Report\OpnameList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PVC\Report\OpnameList.Designer.cs">
+      <DependentUpon>OpnameList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Report\PVCOpnameReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Report\PVCOpnameReport.Designer.cs">
+      <DependentUpon>PVCOpnameReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="PVC\Sales\CreateSalesPVC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PVC\Sales\CreateSalesPVC.Designer.cs">
       <DependentUpon>CreateSalesPVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCCashStamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVC\Sales\PVCCashStamp.Designer.cs">
+      <DependentUpon>PVCCashStamp.cs</DependentUpon>
     </Compile>
     <Compile Include="PVC\Sales\PVCSalesPayment.cs">
       <SubType>Form</SubType>
@@ -449,6 +467,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintingSalesWorkOrder.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PVC\LaporanBedaPVCStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanBedaPVCStock.rpt</DependentUpon>
     </Compile>
     <Compile Include="Report\PVC\LaporanHutangKeseluruhan.cs">
       <AutoGen>True</AutoGen>
@@ -920,8 +943,17 @@
     <EmbeddedResource Include="PVC\Report\ClosingReport.resx">
       <DependentUpon>ClosingReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Report\OpnameList.resx">
+      <DependentUpon>OpnameList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Report\PVCOpnameReport.resx">
+      <DependentUpon>PVCOpnameReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PVC\Sales\CreateSalesPVC.resx">
       <DependentUpon>CreateSalesPVC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PVC\Sales\PVCCashStamp.resx">
+      <DependentUpon>PVCCashStamp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PVC\Sales\PVCSalesPayment.resx">
       <DependentUpon>PVCSalesPayment.cs</DependentUpon>
@@ -1004,6 +1036,10 @@
     <EmbeddedResource Include="Report\PrintingSales\PrintingSalesWorkOrder.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PrintingSalesWorkOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PVC\LaporanBedaPVCStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanBedaPVCStock.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\PVC\LaporanHutangKeseluruhan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

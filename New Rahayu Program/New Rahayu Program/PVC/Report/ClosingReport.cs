@@ -148,6 +148,7 @@ namespace Rahayu_Program.PVC.Report
             fields.Add(field1);
 
             reportForm.GetCrystalReportViewer().ReportSource = laporan;
+            reportForm.GetCrystalReportViewer().ParameterFieldInfo = fields;
             reportForm.GetCrystalReportViewer().Refresh();
             reportForm.Show();
         }
@@ -238,7 +239,7 @@ namespace Rahayu_Program.PVC.Report
 
         private void btnPrintStock_Click(object sender, EventArgs e)
         {
-            DataTable dt = main.ExecuteQuery("SELECT pvcTypeName, mp.pvcID, pvcName, pvcPerPack, pvcTypeUnit, sellPrice, homeStock, rahayuStock FROM MsPVC mp JOIN MsPVCType mpt ON mp.pvcTypeID = mpt.pvcTypeID");
+            DataTable dt = main.ExecuteQuery("SELECT pvcTypeName, mp.pvcID, pvcName, pvcPerPack, pvcTypeUnit, sellPrice, homeStock, rahayuStock FROM MsPVC mp JOIN MsPVCType mpt ON mp.pvcTypeID = mpt.pvcTypeID WHERE NOT mp.pvcTypeID = 8 AND NOT mp.pvcTypeID = 9 ORDER BY mpt.pvcTypeName");
 
             if (dt == null)
             {
@@ -322,30 +323,18 @@ namespace Rahayu_Program.PVC.Report
             }
         }
 
+        public PVCOpnameReport opname;
+
         private void btnOpnameAkhir_Click(object sender, EventArgs e)
         {
-            DataTable dt = main.ExecuteQuery("SELECT pvcTypeName, mp.pvcID, pvcName, pvcPerPack, pvcTypeUnit, sellPrice, homeStock, rahayuStock FROM MsPVC mp JOIN MsPVCType mpt ON mp.pvcTypeID = mpt.pvcTypeID");
+            opname = new PVCOpnameReport(main, this, awal, akhir);
+            opname.Show();
+            opname.BringToFront();
+        }
 
-            if (dt == null)
-            {
-                MessageBox.Show("ERROR PRINT REPORT (LAPORAN HARIAN DI CLOSING FORM PVC)");
-                this.Dispose();
-            }
-            else
-            {
-                if (dt.Rows.Count > 0)
-                {
-                    Rahayu_Program.Report.PVC.LaporanStockManual laporan = new Rahayu_Program.Report.PVC.LaporanStockManual();
-                    laporan.SetDataSource(dt);
-                    laporan.SummaryInfo.ReportTitle = "PVC Laporan Stock Manual";
-
-                    buatLaporanByQueryStock(laporan, false); //false soalnya ga mau di tutupin
-                }
-                else
-                {
-                    MessageBox.Show("DATA TIDAK ADA (LAPORAN HARIAN DI CLOSING FORM PVC)");
-                }
-            }
+        public void opnameSetNull()
+        {
+            opname = null;
         }
     }
 }

@@ -146,6 +146,10 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.checkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockOpnamePVCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printLaporanOpnameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hitungDuitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -324,7 +328,8 @@
             this.salesToolStripMenuItem,
             this.transferToolStripMenuItem,
             this.purchaseToolStripMenuItem,
-            this.reportToolStripMenuItem});
+            this.reportToolStripMenuItem,
+            this.checkToolStripMenuItem});
             this.pVCToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pVCToolStripMenuItem.Name = "pVCToolStripMenuItem";
             this.pVCToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
@@ -338,7 +343,7 @@
             this.pelunasanBerdasarkanCustomerToolStripMenuItem1,
             this.lihatPenjualanToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-            this.salesToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.salesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.salesToolStripMenuItem.Text = "Sales";
             // 
             // penjualanHarianToolStripMenuItem1
@@ -375,7 +380,7 @@
             this.rumahKeGrahaToolStripMenuItem,
             this.lihatDataTransferToolStripMenuItem});
             this.transferToolStripMenuItem.Name = "transferToolStripMenuItem";
-            this.transferToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.transferToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.transferToolStripMenuItem.Text = "Transfer";
             // 
             // rumahKeRahayuToolStripMenuItem
@@ -405,7 +410,7 @@
             this.lihatPesananYgDatangToolStripMenuItem,
             this.lihatDataPembelianToolStripMenuItem});
             this.purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
-            this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.purchaseToolStripMenuItem.Text = "Purchase";
             // 
             // pesananKeChinaToolStripMenuItem
@@ -441,7 +446,7 @@
             this.penjualanBulananToolStripMenuItem,
             this.closingFormToolStripMenuItem});
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.reportToolStripMenuItem.Text = "Report";
             // 
             // penjualanHarianToolStripMenuItem
@@ -1049,6 +1054,34 @@
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // checkToolStripMenuItem
+            // 
+            this.checkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockOpnamePVCToolStripMenuItem,
+            this.printLaporanOpnameToolStripMenuItem,
+            this.hitungDuitToolStripMenuItem});
+            this.checkToolStripMenuItem.Name = "checkToolStripMenuItem";
+            this.checkToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.checkToolStripMenuItem.Text = "Check";
+            // 
+            // stockOpnamePVCToolStripMenuItem
+            // 
+            this.stockOpnamePVCToolStripMenuItem.Name = "stockOpnamePVCToolStripMenuItem";
+            this.stockOpnamePVCToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
+            this.stockOpnamePVCToolStripMenuItem.Text = "Stock Opname PVC";
+            // 
+            // printLaporanOpnameToolStripMenuItem
+            // 
+            this.printLaporanOpnameToolStripMenuItem.Name = "printLaporanOpnameToolStripMenuItem";
+            this.printLaporanOpnameToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
+            this.printLaporanOpnameToolStripMenuItem.Text = "Print Laporan Opname";
+            // 
+            // hitungDuitToolStripMenuItem
+            // 
+            this.hitungDuitToolStripMenuItem.Name = "hitungDuitToolStripMenuItem";
+            this.hitungDuitToolStripMenuItem.Size = new System.Drawing.Size(218, 24);
+            this.hitungDuitToolStripMenuItem.Text = "Hitung Duit";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1193,6 +1226,10 @@
         private System.Windows.Forms.ToolStripMenuItem createNotaCloneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editAllNotaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateHargaPVCRahayuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockOpnamePVCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printLaporanOpnameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hitungDuitToolStripMenuItem;
     }
 }
 
